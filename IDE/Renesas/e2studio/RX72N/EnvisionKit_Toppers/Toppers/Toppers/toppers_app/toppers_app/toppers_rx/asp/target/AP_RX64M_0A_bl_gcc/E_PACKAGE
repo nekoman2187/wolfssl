@@ -1,0 +1,6 @@
+E_PACKAGE asp_rsk_rx_hew
+VERSION %date
+
+INCLUDE ../../MANIFEST
+INCLUDE ../../arch/rx_rxc/MANIFEST
+INCLUDE ../../cfg/MANIFEST

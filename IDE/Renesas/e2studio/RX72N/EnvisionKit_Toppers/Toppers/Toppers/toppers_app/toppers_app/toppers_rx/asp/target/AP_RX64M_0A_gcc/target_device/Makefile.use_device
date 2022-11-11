@@ -1,0 +1,60 @@
+#
+# Copyright (c) 2017- Hisashi Hata
+# Released under the toppers license
+# https://www.toppers.jp/license.html
+#
+
+##
+# select device driver
+##
+
+#USE_RSPI_0 ?= true
+USE_RSPI_0 ?= false
+
+#USE_MMC_RSPI_0 ?= true
+USE_MMC_RSPI_0 ?= false
+
+#USE_MMC_GPIO_0 ?= true
+USE_MMC_GPIO_0 ?= false
+
+#USE_DTCA_0 ?= true
+USE_DTCA_0 ?= false
+
+USE_SCIG_0 ?= true
+#USE_SCIG_0 ?= false
+
+#USE_EPTPC_0 ?= true
+USE_EPTPC_0 ?= false
+
+#
+# Device driver's COPTS
+#
+
+USE_COPTS :=
+
+ifeq ($(USE_RSPI_0),true)
+USE_COPTS := $(USE_COPTS) -DUSE_RSPI_0
+endif
+
+ifeq ($(USE_MMC_RSPI_0),true)
+USE_COPTS := $(USE_COPTS) -DUSE_MMC_RSPI_0
+endif
+
+ifeq ($(USE_MMC_GPIO_0),true)
+USE_COPTS := $(USE_COPTS) -DUSE_MMC_GPIO_0
+endif
+
+ifeq ($(USE_DTCA_0),true)
+USE_COPTS := $(USE_COPTS) -DUSE_DTCA_0
+endif
+
+ifeq ($(USE_SCIG_0),true)
+USE_COPTS := $(USE_COPTS) -DUSE_SCIG_0
+endif
+
+
+ifeq ($(USE_EPTPC_0),true)
+USE_COPTS := $(USE_COPTS) -DUSE_EPTPC_0
+endif
+
+COPTS := $(COPTS) $(USE_COPTS)

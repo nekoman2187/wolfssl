@@ -1,0 +1,6 @@
+#
+#		Driver Makefile (bootload)
+#
+
+SYSSVC_DIR := $(SYSSVC_DIR) $(MIDDLEWAREDIR)/bism
+SYSSVC_COBJS := $(SYSSVC_COBJS) bism_bbf_ring.o  bism_io.o  bism_v1.o

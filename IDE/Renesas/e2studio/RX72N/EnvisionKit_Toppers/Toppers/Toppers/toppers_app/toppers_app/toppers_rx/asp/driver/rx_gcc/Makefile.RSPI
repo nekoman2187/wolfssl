@@ -1,0 +1,6 @@
+#
+#		Driver Makefile (RSPI)
+#
+
+
+DRIVER_COBJS :=  $(DRIVER_COBJS) RSPI.o

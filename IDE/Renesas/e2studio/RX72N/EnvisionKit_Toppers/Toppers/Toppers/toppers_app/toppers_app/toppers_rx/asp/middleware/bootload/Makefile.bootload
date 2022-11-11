@@ -1,0 +1,6 @@
+#
+#		Driver Makefile (bootload)
+#
+
+SYSSVC_DIR := $(SYSSVC_DIR) $(MIDDLEWAREDIR)/bootload
+SYSSVC_COBJS := $(SYSSVC_COBJS) boot_elf.o  elf_fio.o

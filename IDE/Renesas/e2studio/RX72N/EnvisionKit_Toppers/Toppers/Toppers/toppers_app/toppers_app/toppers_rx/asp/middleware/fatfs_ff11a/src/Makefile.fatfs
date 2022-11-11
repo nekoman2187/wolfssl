@@ -1,0 +1,6 @@
+#
+#		Driver Makefile (FatFs)
+#
+
+SYSSVC_DIR := $(SYSSVC_DIR) $(MIDDLEWAREDIR)/fatfs_ff11a/src
+SYSSVC_COBJS := $(SYSSVC_COBJS) diskio.o ff.o

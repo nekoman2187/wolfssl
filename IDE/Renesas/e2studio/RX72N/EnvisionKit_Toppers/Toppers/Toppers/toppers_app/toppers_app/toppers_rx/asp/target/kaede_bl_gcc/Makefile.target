@@ -1,0 +1,102 @@
+#
+#		Makefileのターゲット依存部（RX用）
+#
+
+#
+#  ボード名，プロセッサ名，開発環境名の定義
+#
+BOARD = GR-KAEDE
+PRC = rx64m
+TOOL = gcc
+
+# gcc target prefix
+GCC_TARGET = rx-elf
+
+#
+#  コンパイルオプション
+#
+INCLUDES := $(INCLUDES) -I$(TARGETDIR)
+#COPTS :=
+#CDEFS :=
+#LDFLAGS :=
+#LIBS :=
+
+#
+#  Driver Setting
+#
+
+include $(TARGETDIR)/target_device/Makefile.target_device
+
+DRIVERDIR = $(SRCDIR)/driver/rx_gcc
+
+include $(DRIVERDIR)/Makefile_rx64m.driver
+
+#
+# Middleware Setting
+#
+
+include $(SRCDIR)/middleware/Makefile.middleware
+
+#
+#  カーネルに関する定義
+#
+KERNEL_DIR := $(KERNEL_DIR) $(TARGETDIR) $(DRIVERDIR)
+KERNEL_ASMOBJS := $(KERNEL_ASMOBJS) target_support.o target_option_mem.o
+KERNEL_COBJS := $(KERNEL_COBJS) target_config.o target_timer.o  $(DRIVER_COBJS)
+
+#
+#  システムサービスに関する定義
+#
+SYSSVC_DIR := $(SYSSVC_DIR)
+SYSSVC_COBJS := $(SYSSVC_COBJS) target_serial.o tinet_target_config.o
+
+#
+#  コンフィギュレータ関係の変数の定義
+#
+CFG_TABS := $(CFG_TABS) --cfg1-def-table $(TARGETDIR)/target_def.csv
+
+#
+#  各セグメントの開始アドレスの定義
+#
+TEXT_START_ADDRESS =
+DATA_START_ADDRESS =
+
+#
+#  リンカスクリプトの定義
+#
+LDSCRIPT = $(TARGETDIR)/kaede_bl_gcc.ld
+
+#
+#  スタートアップモジュールに関する定義
+#
+#  rxelf.ldに「STARTUP(start.o)」を記述したため，スタートアップモジュー
+#  ルの名前をHIDDEN_OBJSに定義する．また，LDFLAGSに-nostdlibを追加している．
+#
+
+HIDDEN_OBJS = start.o
+
+$(HIDDEN_OBJS): %.o: %.S
+	$(CC) -c $(CFLAGS) $(KERNEL_CFLAGS) $<
+
+$(HIDDEN_OBJS:.o=.d): %.d: %.S
+	@$(PERL) $(SRCDIR)/utils/makedep -C $(CC) $(MAKEDEP_OPTS) \
+		-O "$(CFLAGS) $(KERNEL_CFLAGS)" $< >> Makefile.depend
+
+LDFLAGS := -nostdlib $(LDFLAGS)
+CFG1_OUT_LDFLAGS := -nostdlib $(CFG1_OUT_LDFLAGS)
+LIBS := $(LIBS) -lgcc
+
+
+CFG_ASMOBJS := $(CFG_ASMOBJS) kernel_cfg_asm.o sectrx.o DTCa_vecter.o
+
+#
+#  依存関係の定義
+#
+cfg1_out.c: $(TARGETDIR)/target_def.csv
+kernel_cfg.timestamp: $(TARGETDIR)/target.tf
+$(OBJFILE): $(TARGETDIR)/target_check.tf
+
+#
+#  プロセッサ依存部のインクルード
+#
+include $(SRCDIR)/arch/rx_$(TOOL)/$(PRC)/Makefile.prc

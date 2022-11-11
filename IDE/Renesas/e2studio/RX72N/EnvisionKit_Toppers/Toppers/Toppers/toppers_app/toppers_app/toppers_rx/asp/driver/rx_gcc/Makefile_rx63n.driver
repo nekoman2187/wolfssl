@@ -1,0 +1,23 @@
+
+DRIVER_COBJS =
+
+ifeq ($(USE_RSPI_0),true)
+include $(DRIVERDIR)/Makefile.RSPI
+endif
+
+ifeq ($(USE_MMC_RSPI_0),true)
+include $(DRIVERDIR)/Makefile.mmc_rspi
+endif
+
+include $(DRIVERDIR)/Makefile.mmc_gpio
+ifeq ($(USE_MMC_GPIO_0),true)
+endif
+
+ifeq ($(USE_DTCA_0),true)
+include $(DRIVERDIR)/Makefile.DTCa
+endif
+
+ifeq ($(USE_SCIC_0),true)
+include $(DRIVERDIR)/Makefile.SCIc
+endif
+

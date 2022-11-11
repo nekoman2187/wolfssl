@@ -1,0 +1,34 @@
+PACKAGE asp_target_rsk_rx_hew
+VERSION 1.6.0
+
+sample_workspace
+E_PACKAGE
+MANIFEST
+asm_config.cfg
+asm_config_pass1.bat
+asm_config_pass2.bat
+sectrx.inc
+starter_kit.h
+target.tf
+target_asm_config.tf
+target_cfg1_out.h
+target_check.tf
+target_config.c
+target_config.h
+target_def.csv
+target_kernel.h
+target_rename.def
+target_rename.h
+target_serial.c
+target_serial.cfg
+target_serial.h
+target_sil.h
+target_stddef.h
+target_support.src
+target_syssvc.h
+target_test.h
+target_timer.c
+target_timer.cfg
+target_timer.h
+target_unrename.h
+target_user.txt

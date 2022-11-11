@@ -1,0 +1,7 @@
+
+
+KERNEL_DIR := $(KERNEL_DIR) $(TARGETDIR)/target_device
+KERNEL_COBJS := $(KERNEL_COBJS) target_device_node.o
+
+include $(TARGETDIR)/target_device/Makefile.use_device
+include $(TARGETDIR)/target_device/device_init/Makefile.device_init

@@ -1,0 +1,1003 @@
+cfg1_out.c: sample1.cfg ./toppers_rx/asp/syssvc/banner.cfg ./toppers_rx/asp/syssvc/logtask.cfg ./toppers_rx/asp/syssvc/syslog.cfg ./toppers_rx/asp/target/rx72n_gcc/target_edmac.cfg ./toppers_rx/asp/target/rx72n_gcc/target_timer.cfg 
+cfg1_out.o: ./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	sample1.cfg sample1.h ./toppers_rx/asp/syssvc/syslog.cfg \
+	./toppers_rx/asp/kernel/task.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/include/queue.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_syssvc.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_unrename.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_cfg1_out.h \
+	./toppers_rx/asp/kernel/mailbox.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/kernel/exception.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/syssvc/banner.cfg \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/kernel/semaphore.h \
+	./toppers_rx/asp/kernel/wait.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_edmac.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_test.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_cfg1_out.h \
+	./toppers_rx/asp/kernel/pridataq.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_test.h \
+	./toppers_rx/asp/kernel/interrupt.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/kernel/alarm.h \
+	./toppers_rx/asp/kernel/eventflag.h \
+	./toppers_rx/asp/syssvc/banner.h \
+	./toppers_rx/asp/syssvc/syslog.h \
+	./toppers_rx/asp/kernel/cyclic.h \
+	./toppers_rx/asp/kernel/kernel_unrename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_edmac.cfg \
+	./toppers_rx/asp/syssvc/logtask.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/kernel/dataqueue.h cfg1_out.c \
+	./toppers_rx/asp/kernel/kernel_int.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_syssvc.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/kernel/mempfix.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_timer.h \
+	./toppers_rx/asp/syssvc/logtask.cfg \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_timer.cfg 
+target_support.o: ./toppers_rx/asp/target/rx72n_gcc/target_support.S 
+prc_test.o: ./toppers_rx/asp/arch/rx_gcc/rx_common/prc_test.S 
+prc_support.o: ./asm_config.inc ./offset.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_support.S 
+target_config.o: ./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.c \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/include/t_syslog.h 
+target_timer.o: ./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_timer.c \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_syssvc.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/include/kernel.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_syssvc.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_timer.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h 
+target_edmac.o: ./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_edmac.c \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_edmac.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h 
+dummy.o: ./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/dummy.c \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h 
+prc_config.o: ./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/include/kernel.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.c 
+rx72n_config.o: ./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.c \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h 
+rx72n_support.o: ./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/RX72n.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_support.c \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h 
+startup.o: ./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/kernel/startup.c \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h 
+task.o: ./toppers_rx/asp/kernel/task.c \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/include/queue.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/kernel/task.h \
+	./toppers_rx/asp/kernel/wait.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h 
+wait.o: ./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/kernel/task.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/include/queue.h \
+	./toppers_rx/asp/kernel/wait.c \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/kernel/wait.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h 
+time_event.o: ./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/kernel/time_event.c \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h 
+task_manage.o: ./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/include/queue.h \
+	./toppers_rx/asp/kernel/task_manage.c \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/kernel/task.h \
+	./toppers_rx/asp/kernel/check.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/kernel/wait.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h 
+task_refer.o: ./toppers_rx/asp/kernel/mempfix.h \
+	./toppers_rx/asp/kernel/task_refer.c \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/kernel/pridataq.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/kernel/wait.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/kernel/dataqueue.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/include/queue.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/kernel/task.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/kernel/check.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/kernel/mailbox.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/kernel/semaphore.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/kernel/eventflag.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h 
+task_sync.o: \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/include/kernel.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/kernel/wait.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/kernel/task_sync.c \
+	./toppers_rx/asp/kernel/check.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/include/queue.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/kernel/task.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h 
+task_except.o: ./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/include/queue.h \
+	./toppers_rx/asp/kernel/task.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/kernel/check.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/kernel/task_except.c \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/kernel/kernel_rename.h 
+semaphore.o: ./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/kernel/task.h \
+	./toppers_rx/asp/kernel/check.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/kernel/wait.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/kernel/semaphore.c \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/kernel/semaphore.h \
+	./toppers_rx/asp/include/queue.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h 
+eventflag.o: ./toppers_rx/asp/kernel/check.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/kernel/task.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/kernel/eventflag.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/include/sil.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/kernel/eventflag.c \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/kernel/wait.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/include/queue.h 
+dataqueue.o: ./toppers_rx/asp/kernel/task.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/kernel/check.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/kernel/dataqueue.c \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/kernel/wait.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/include/queue.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/kernel/dataqueue.h 
+pridataq.o: ./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/kernel/task.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/include/queue.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/kernel/pridataq.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/kernel/wait.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/kernel/check.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/kernel/pridataq.c 
+mailbox.o: ./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/kernel/mailbox.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/kernel/mailbox.c \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/kernel/check.h \
+	./toppers_rx/asp/include/queue.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/kernel/wait.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/kernel/task.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/kernel/kernel_impl.h 
+mempfix.o: ./toppers_rx/asp/include/queue.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/kernel/task.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/kernel/check.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/kernel/wait.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/kernel/mempfix.c \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/kernel/mempfix.h 
+time_manage.o: ./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/kernel/time_manage.c \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_timer.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/kernel/check.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_syssvc.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_syssvc.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h 
+cyclic.o: ./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/kernel/cyclic.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/kernel/cyclic.c \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/include/kernel.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/kernel/check.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h 
+alarm.o: \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/kernel/alarm.c \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/kernel/alarm.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/kernel/check.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/include/t_stddef.h 
+sys_manage.o: ./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/kernel/check.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/kernel/task.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/include/queue.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/kernel/sys_manage.c \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/kernel/kernel_rename.h 
+interrupt.o: ./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/kernel/check.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/kernel/interrupt.c \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/include/queue.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/kernel/interrupt.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/kernel/task.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h 
+exception.o: ./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/kernel/exception.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/kernel/task.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/include/queue.h \
+	./toppers_rx/asp/kernel/exception.c \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/include/sil.h 
+sample1.o: ./toppers_rx/asp/syssvc/syslog.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_test.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/syssvc/serial.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_test.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/include/kernel.h sample1.h kernel_cfg.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	sample1.c \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/include/t_stdlib.h 
+log_output.o: ./toppers_rx/asp/include/t_syslog.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/include/log_output.h \
+	./toppers_rx/asp/library/log_output.c \
+	./toppers_rx/asp/include/t_stddef.h 
+vasyslog.o: \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stdarg.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/library/vasyslog.c \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h 
+t_perror.o: \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/library/t_perror.c \
+	./toppers_rx/asp/include/t_stdlib.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h 
+strerror.o: \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/library/strerror.c \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/include/t_stdlib.h 
+banner.o: ./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_syssvc.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_syssvc.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/syssvc/banner.h \
+	./toppers_rx/asp/syssvc/banner.c \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/include/sil.h 
+syslog.o: ./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/syssvc/syslog.c \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/syssvc/syslog.h \
+	./toppers_rx/asp/include/log_output.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_syssvc.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_syssvc.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h 
+logtask.o: ./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_syssvc.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_syssvc.h \
+	./toppers_rx/asp/syssvc/logtask.c \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/syssvc/logtask.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/include/log_output.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/syssvc/syslog.h \
+	./toppers_rx/asp/syssvc/serial.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h 
+kernel_cfg_asm.o: kernel_cfg_asm.S 
+sectrx.o: ./toppers_rx/asp/target/rx72n_gcc/sectrx.S 
+kernel_cfg.o: ./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/syssvc/syslog.h \
+	./toppers_rx/asp/include/t_stddef.h \
+	./toppers_rx/asp/kernel/semaphore.h \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_timer.h \
+	./toppers_rx/asp/kernel/mailbox.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_test.h \
+	./toppers_rx/asp/kernel/time_event.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/syssvc/banner.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/kernel/wait.h \
+	./toppers_rx/asp/kernel/kernel_unrename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/syssvc/logtask.h kernel_cfg.h \
+	./toppers_rx/asp/kernel/kernel_int.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/kernel/dataqueue.h \
+	./toppers_rx/asp/kernel/eventflag.h \
+	./toppers_rx/asp/kernel/pridataq.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_syssvc.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	kernel_cfg.c ./toppers_rx/asp/include/t_syslog.h sample1.h \
+	./toppers_rx/asp/kernel/cyclic.h \
+	./toppers_rx/asp/kernel/task.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/kernel/mempfix.h \
+	./toppers_rx/asp/kernel/exception.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include-fixed\\limits.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_test.h \
+	c:\\programdata\\gcc\ for\ renesas\ rx\ 8.3.0.202102-gnurx-elf\\rx-elf\\rx-elf\\lib\\gcc\\rx-elf\\8.3.0.202102-gnurx\\include\\stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/prc_syssvc.h \
+	./toppers_rx/asp/include/queue.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_unrename.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/kernel/alarm.h \
+	./toppers_rx/asp/kernel/interrupt.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_edmac.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_insn.h 
+start.o: ./toppers_rx/asp/arch/rx_gcc/rx72n/prc_stddef.h \
+	./toppers_rx/asp/kernel/kernel_impl.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_board.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_rename.h \
+	./toppers_rx/asp/kernel/kernel_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_rename.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n.h \
+	./toppers_rx/asp/include/sil.h \
+	./toppers_rx/asp/arch/gcc/tool_stddef.h \
+	./toppers_rx/asp/include/t_syslog.h \
+	./toppers_rx/asp/kernel/allfunc.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_stddef.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/rx72n_config.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_sil.h \
+	./toppers_rx/asp/arch/rx_gcc/rx72n/start.S \
+	./toppers_rx/asp/include/kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_kernel.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_config.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_kernel.h \
+	./toppers_rx/asp/arch/rx_gcc/rx_common/prc_config.h \
+	./toppers_rx/asp/target/rx72n_gcc/target_sil.h \
+	./toppers_rx/asp/include/t_stddef.h 

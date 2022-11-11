@@ -1,0 +1,30 @@
+
+KERNEL_DIR := $(KERNEL_DIR) $(TARGETDIR)/target_device/device_init
+
+DRIVER_INIT_COBJS =
+
+ifeq ($(USE_RSPI_0),true)
+DRIVER_INIT_COBJS := $(DRIVER_INIT_COBJS) RSPI_init.o
+endif
+
+ifeq ($(USE_MMC_RSPI_0),true)
+DRIVER_INIT_COBJS := $(DRIVER_INIT_COBJS) mmc_rspi_init.o
+endif
+
+ifeq ($(USE_MMC_GPIO_0),true)
+DRIVER_INIT_COBJS := $(DRIVER_INIT_COBJS) mmc_gpio_init.o
+endif
+
+ifeq ($(USE_DTCA_0),true)
+DRIVER_INIT_COBJS := $(DRIVER_INIT_COBJS) DTCa_init.o
+endif
+
+ifeq ($(USE_SCIG_0),true)
+DRIVER_INIT_COBJS := $(DRIVER_INIT_COBJS) SCIg_init.o
+endif
+
+ifeq ($(USE_EPTPC_0),true)
+DRIVER_INIT_COBJS := $(DRIVER_INIT_COBJS) EPTPC_init.o
+endif
+
+KERNEL_COBJS := $(KERNEL_COBJS) $(DRIVER_INIT_COBJS)

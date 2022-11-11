@@ -1,0 +1,6 @@
+PACKAGE pdic_rx600
+VERSION 1.6.0
+
+MANIFEST
+rx600_uart.c
+rx600_uart.h

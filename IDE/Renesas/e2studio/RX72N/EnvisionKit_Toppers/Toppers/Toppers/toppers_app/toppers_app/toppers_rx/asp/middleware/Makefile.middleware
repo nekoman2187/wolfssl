@@ -1,0 +1,43 @@
+
+MIDDLEWAREDIR :=  $(SRCDIR)/middleware
+
+#INS_MID_FATFS ?= true
+INS_MID_FATFS ?= false
+
+#INS_MID_FTPD ?= true
+INS_MID_FTPD ?= false
+
+#INS_MID_SHELL ?= true
+INS_MID_SHELL ?= false
+
+#INS_MID_BOOTLD ?= true
+INS_MID_BOOTLD ?= false
+
+#INS_MID_BISM ?= true
+INS_MID_BISM ?= false
+
+#
+# Switch instaling middleware
+#
+
+
+ifeq ($(INS_MID_FATFS),true)
+include $(MIDDLEWAREDIR)/fatfs_ff11a/src/Makefile.fatfs
+endif
+
+ifeq ($(INS_MID_FTPD),true)
+include $(MIDDLEWAREDIR)/tinet_ftpd/Makefile.tinet_ftpd
+endif
+
+ifeq ($(INS_MID_SHELL),true)
+include $(MIDDLEWAREDIR)/tinet_shell/Makefile.tinet_shell
+endif
+
+ifeq ($(INS_MID_BOOTLD),true)
+include $(MIDDLEWAREDIR)/bootload/Makefile.bootload
+endif
+
+ifeq ($(INS_MID_BISM),true)
+include $(MIDDLEWAREDIR)/bism/Makefile.bism
+endif
+
