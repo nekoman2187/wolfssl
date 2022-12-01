@@ -64,7 +64,7 @@
      はインディアン形式による)を選択し[適用して閉じる]を押下  
 
   # 6.e² studio BSP修正
- 6-1.本プロジェクトをToppersに適用する為、BSPに以下に変更及び修正を加える  
+ 6-1.本プロジェクトをToppersに適用する為、BSPに以下の変更及び修正を加える  
  ```  
 smc_gen\general\r_cg_hardware_setup.c  
 void R_Systeminit(void)  
