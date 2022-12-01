@@ -182,7 +182,7 @@ sp_x86_64_asm.S
 7-14.Toppersライブラリーのビルドの為、XXXよりbuild_rx7n_toppers.zipをダウンロードし解凍する
 (解凍先は以下で作成するプロジェクトと同じ階層とする)
 7-15.メニューの[ファイル]→[新規]→[Makefile Project with Existing Code]を選択  
-7-16.[既存のコードをインポート]ダイアログで[プロジェクト名]を入力し[既存のコードの場所]で[7-14]で解凍したディレクトリで[toppers/toppers_app]を指定し、[インデクサー設定に対するtoolchain]は[GCC for Renesas RX]を選択し[終了]を押下  　　
+7-16.[既存のコードをインポート]ダイアログで[プロジェクト名]を入力し[既存のコードの場所]で[7-14]で解凍したディレクトリで[toppers/toppers_app]を指定し、[インデクサー設定に対するtoolchain]は[GCC for Renesas RX]を選択し[終了]を押下  
 7-17.以下のコマンドを実行  
  ```  
 $ pwd
