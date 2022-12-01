@@ -6,7 +6,7 @@
 
 1.Renesas e² studio Version: 2022-07 (22.7.0)以降   
 2.Toopers OS 1.91.1 Renesas RX72N適用バージョン   
-3.WolfSSL Release 5.4.0 以降 (gitレポジトより入手)  
+3.WolfSSL Release 5.4.0 以降 (gitレポジトリーより入手)  
 
 # 以下に環境構築手順を示す 
 # 1.e² studioプロジェクト作成 
