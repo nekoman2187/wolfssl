@@ -1,70 +1,59 @@
 ## Renesas RX72N EnvisionKit with TOPPERS OS 
 
-本デモはルネサス「RX72N EnvisionKit 」に「Toopers OS」を適用し「WolfSSL」の動作を確認するものである 
+本デモはルネサス「RX72N EnvisionKit 」に「Toopers OS」を適用し「WolfSSL」の動作を確認します
 
-# 本デモについては以下が必要である 
+# 本デモについては以下が必要です 
 
 1.Renesas e² studio Version: 2022-07 (22.7.0)以降   
 2.Toopers OS 1.91.1 Renesas RX72N適用バージョン   
 3.WolfSSL Release 5.0.0 以降 (gitレポジトリーより入手)  
 
-# 以下に環境構築手順を示す 
+# 以下に環境構築手順を示します
 # 1.e² studioプロジェクト作成 
- 1-1.メニューの[ファイル]→[Renesas C/C++ Project]→[Renesas RX]を選択  
- 1-2.プロジェクト選択BOXの[GCC for Renesas RX Executable Projec]を選択[次へ(N)]を選択  
- 1-3.プロジェクト名を入力  
- 1-4.[toolchain Seetings]で[C](デフォルト),ツールチェーン：[GCC for Renesas RX ](デフォルト)  
-     ツールチェーン・バージョン：[8.3.0.202202]を選択   
- 1-5.[Device Seetings]でTarget Board:[RX72NEnvisionKit]をプルダウンメニューから選択  
- 1-6.[次へ(N)]を選択後次画面で[終了]を選択(use Smart Configuratorはチェック)  
+ 1-1.メニューの[ファイル]→[インポート(I)...]→[既存プロジェクトをワークスペースへ]→[次へ]を選択  
+ 1-2.[プロジェクトをインポート]ダイアログの[ルートディレクトリーの選択(T)]の[参照(R)]を押下
+ 1-3.git レポジトリwolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppersの[WolfSSLDemo]を選択[フォルダーの選択]を押下      
+  (既に本ディレクトリーを含んだwolfsslの環境を展開済みとしてください)
+ 1-4.[プロジェクトをインポート]ダイアログの[プロジェクト(P)] チェックボックスを選択後[終了(F)]を押下   
+ 1-5.[WolfSSLDemo.scfg]をダブルクリックで設定ダイアログが表示→[コンポーネントタブ] を選択  
+ 1-6.ダイアログ左側の[Startup/ジェネリック/bsp]を選択後ダイアログ右上の[コードの生成]を押下  
+ 1-7.ダイアログ左側の[Drivers/通信/r_ether_rx]を選択後ダイアログ右上の[コードの生成]を押下  
+ 1-8.ダイアログ左側の[Drivers/タイマ/r_cmt_rx]を選択後ダイアログ右上の[コードの生成]を押下  
+ 1-9.ダイアログ左側の[Middleware/タイマ/r_sys_time_rx]を選択後ダイアログ右上の[コードの生成]を押下  
+ 1-10.ダイアログ左側の[Middleware/通信/r_t4_driver_rx]を選択後ダイアログ右上の[コードの生成]を押下  
+ 1-11.ダイアログ左側の[Middleware/通信/r_t4_rx]を選択後ダイアログ右上の[コードの生成]を押下  
+ 1-12.以下を修正
+```
+smc_gen\r_t4_driver_rx\src\t4_driver.c  
+#include "r_tsip_rx_if.h"  
+  ↓  修正  
+//#include "r_tsip_rx_if.h"  
+```
 
- # 2.e² studioプロジェクト設定  
- 2-1.プロジェクト名.scfgをダブルクリック  
- 2-2.「概説」が表示されている領域の[コンポーネント]を選択  
- 2-3.コンポーネントの[+]マークの[コンポーネントの追加]選択  
- 2-4.[機能]プルダウンメニューから[通信]を選択  
- 2-5.[Ethernet Driver][TCP/IP protocol stack]の[r_t4_driver_rx][r_t4_rx]の三つを選択後[終了]を選択  
- 2-6.[r_bsp]をクリックし[プロパティ]ダイアログの 以下を変更する
-```  
-  User stack setting   2stacks
-  User stack size      0x400
-  Interrupt stack size 0x8000
-  Heap size            0xA000 　　 
- ```
- 2-7.[r_ether_rx]をクリックし[プロパティ]ダイアログの 以下を変更する
-```  
-  PHY-LSI address setting for ETHER0　　　　　　　1
-  The register bus of PHY0 for  ETHER0/ETHER1    Use ETHER0　 
- ```
-
-
- # 3.ソースコード追加  
- 3-1.git レポジトリwolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppersの[WolfSSLDemo]を作成したプロジェクト/src/へコピー(自動で作成された[プロジェクト名.c]を削除)    
-      
- # 4.e² studioプロジェクトインクルードパス設定  
- 4-1.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後[Alt＋Enter]キーを押下  
- 4-2.設定ダイアログボックス表示後、[ツール設定]タブ[Compiler]設定の[Include]を選択  
- 4-3.ダイアログボックス右上[+]を押下しディレクトリを選択[3-1]で設定した[WolfSSLDemo]をワークスペースより設定  
- 4-4.上記同様ワークスペース又はファイルシステムより[wolfssl-x.x.x]を設定  
+ # 2.ソースコード追加  
+ 2-1.上記1-xxで作成したプロジェクトの[プロジェクトエクスプローラー]ダイアログの[src]を選択  
+ 2-2.メニューの[ファイル]→[インポート(I)...]→[ファイル・システム]を選択[次へ(N)>]を押下
+ 2-3.[ファイル・システム]ダイアログ[次のディレクトリーから(Y):]の[参照(R)...]を押下
+ 2-4.git レポジトリwolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppersの[WolfDemo]を選択  
+ 2-5.git 選択ダイアログの[wolfDemo]チェックボックスを選択
+ 2-6.[ファイル・システム]ダイアログ下の[拡張>>(A)]を選択→[ワークスペースにリンクを作成(K)]のチェックボックスを選択後[終了(F)]を押下  　　  
+  
+# 3.e² studioプロジェクトインクルードパス設定  
+ 3-1.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後[Alt＋Enter]キーを押下  
+ 3-2.[プロパティ:]ダイアログ左側[C/C++ビルド]を選択後、[設定]を選択  
+ 3-3.設定ダイアログボックス表示後、[ツール設定]タブ[Compiler]設定の[Include]を選択  
+ 3-4.[Macro Defines(-D)]のボックス右上[+]を押下し[WOLFSSL_USER_SETTINGS]を設定    
+ 3-5.[include file directories(-I)]ダイアログボックス右上[+]を押下しディレクトリを選択[2]で追加した[WolfDemo]をワークスペースより設定  
+ 3-6.上記同様ワークスペース又はファイルシステムより[wolfssl-x.x.x]を設定  
      (例:"C:\Users\etc\wolfssl-5.0.0-stable")  
- 4-4.上記[4-2]でダイアログ[Macro Defines(-D)]のボックス右上[+]を押下し[WOLFSSL_USER_SETTINGS]を設定  
+ 2-7.[プロジェクトエクスプローラー]をクリックで選択右クリックでコンテキストメニュー[プロジェクトのビルド(R)]を選択(ビルドによりコンフィグレーションからのファイルが生成されます)  
 
-  # 5.e² studioプロジェクトリンクライブラリー設定  
-  (本設定は[7.ライブラリー作成]完了後行う)  
- 5-1.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後[Alt＋Enter]キーを押下  
- 5-2.設定ダイアログボックス表示後、[ツール設定]タブ[linker]]設定の[Archives]を選択  
- 5-3.ダイアログボックス[User defined archive(library) files(-I)]をボックス右上[+]を押下  
- 5-4.[wolflib][asp]を設定(T4_Library_ether_ccrx_rxv1_littleが入っいる場合は選択後[×]を押下で削除)  
-     (例:"C:\Users\etc\wolfssl-5.0.0-stable")  
- 5-5.ダイアログ最下部[User defined archive search directories (-L))]のボックス右上[+]を押下し       
-     Toppersライブラリー[asp]の場所、wolfライブラリー[wolflib]の場所を設定する   
- 5-6.設定ダイアログボックス表示後、[ツール設定]タブ[linker]]設定の[Source]を選択   
- 5-7.ダイアログボックス[Additional Input files]をボックス右上[+]を押下  
- 5-8.ワークスペース[smc_gen/r_t4_rx/lib/gcc/libT4_Library_ether_gcc_rxv1_XXX.a](xxx  
-     はインディアン形式による)を選択し[適用して閉じる]を押下  
 
-  # 6.e² studio BSP修正
- 6-1.本プロジェクトをToppersに適用する為、BSPに以下の変更及び修正を加える  
+   # 3.e² studio BSP修正
+ 3-1.上記1～2の終了後生成された[プロジェクトエクスプローラー]をクリックで選択右クリックでコンテキストメニュー[プロジェクトのビルド(R)]を選択  
+ (ビルドによりコンフィグレーションからのファイルが生成されます)    
+
+ 3-2.生成されたBSPをToppersに適用する為、BSPに以下の変更及び修正を加えます  
  ```  
 smc_gen\general\r_cg_hardware_setup.c  
 void R_Systeminit(void)  
@@ -123,7 +112,10 @@ R_BSP_SET_INTB(R_BSP_SECTOP_INTVECTTBL);
  	↓  修正
 #elif BSP_CFG_RTOS_USED == 6    /* Renesas RI600V4 & RI600PX */
 #if BSP_CFG_RENESAS_RTOS_USED == RENESAS_RI600V4
-   bsp_interrupt_open();
+
+   bsp_interrupt_open();  
+ 	↓  修正  
+   //bsp_interrupt_open();  
 
 #include "kernel_ram.h"     /* generated by cfg600 */
 #include "kernel_rom.h"     /* generated by cfg600 */
@@ -143,22 +135,29 @@ smc_gen\r_t4_driver_rx\src\t4_driver.c
   ↓  修正  
 //#include "r_tsip_rx_if.h"  
 ```
-  # 7.ライブラリー作成
-  本デモに必要なToppersライブラリー、wolfSSLライブラリーを作成する  
- 7-1.メニューの[ファイル]→[新規]→[Renesas C/C++ Project]→[Renesas RX]を選択  
- 7-2.プロジェクト選択BOXの[GCC for Renesas Library Projec]を選択[次へ(N)]を選択  
- 7-3.プロジェクト名を入力  
- 7-4.[toolchain Seetings]で[C](デフォルト),ツールチェーン：[GCC for Renesas RX ](デフォルト)  
-     ツールチェーン・バージョン：[8.3.0.202202]を選択   
- 7-5.[Device Seetings]でTarget Board:[RX72NEnvisionKit]をプルダウンメニューから選択  
- 7-6.[次へ(N)]を選択後次画面で[終了]を選択([Warn if stack size exceeds the limit, in byte]に24,576を設定)  
- 7-7.作成したプロジェクトのsrc/に入手したWolfSSL Releaseの[wolfssl-x.x.x/src]をドラッグ  
-     ダイアログ[ファイルおよびフォルダーの操作]で[ファイル及びフォルダーにリンク(L)]を選択し[OK]
-     (プロジェクト作成時に自動生成されたsamplex.cは削除する)  
+
+ 
+  # 4.ライブラリー作成
+  本デモに必要なToppersライブラリー、wolfSSLライブラリーを作成します  
+ 1-1.メニューの[ファイル]→[インポート(I)...]→[既存プロジェクトをワークスペースへ]→[次へ]を選択  
+ 1-2.[プロジェクトをインポート]ダイアログの[ルートディレクトリーの選択(T)]の[参照(R)]を押下
+ 1-3.git レポジトリwolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppersの[WolfSSLlib]を選択[フォルダーの選択]を押下      
+ 7-6. [プロジェクト・エクスプローラー]でプロジェクトを選択後右クリックを行い、コンテキストメニュー[プロパティ(R)]を選択→[プロパティ]ダイアログで[C/C++ビルド] をクリックし[設定] を選択
+ 7-7. 設定ダイアログボックス表示後、[Warnings]タブ[Warn if stack exceeds the limit,in bytes(-Wstack-usage)]の値を[24576]に設定
  7-8.設定ダイアログボックス表示後、[ツール設定]タブ[Compiler]設定の[Include]を選択  
  7-9.ダイアログボックス右上[+]を押下しディレクトリを選択[3-1]で設定した[wolfssl-x.x.x]をワークスペース又はファイルシステムより設定  
- 7-10.ダイアログボックス右上[+]を押下しディレクトリをワークスペース[src]に設定  
- 7-10. 上記[4-3.]の[WolfSSLDemo]内にある[user_settings.h]をワークスペース[src]にコピーする
+ 7-10.ダイアログボックス右上[+]を押下しディレクトリを選択[2-4]で設定した[WolfDemo]をワークスペース又はファイルシステムより設定  
+ 7-11.作成したプロジェクトのsrc/に入手したWolfSSL Releaseの[wolfssl-x.x.x/src]をドラッグ  
+     ダイアログ[ファイルおよびフォルダーの操作]で[ファイル及びフォルダーにリンク(L)]を選択し[OK]
+ 7-12.作成したプロジェクトのsrc/に入手したWolfSSL Releaseの[wolfssl-x.x.x/wolfcrypt]をドラッグ  
+     ダイアログ[ファイルおよびフォルダーの操作]で[ファイル及びフォルダーにリンク(L)]を選択し[OK]
+
+ 7-13. src\wolfcrypt\の以下フォルダ
+  ```  
+  user-crypto
+  ```  
+  をプロジェクト・エクスプローラーで選択しクリック後[Alt＋Enter]キーを押下    
+[設定]ダイアログの[ビルドからリソースを除外]にチェックを入れる  
 
  7-11. src\wolfcrypt\の以下ファイル
  ```  
@@ -175,15 +174,25 @@ sp_x86_64_asm.S
 ```  
 をプロジェクト・エクスプローラーで選択しクリック後[Alt＋Enter]キーを押下    
 [設定]ダイアログの[ビルドからリソースを除外]にチェックを入れる  
+ 7-12. srcの以下ファイル
+ ```  
+bio.c
+conf.c
+pk.c
+x509_str.c
+x509.c
+```  
+をプロジェクト・エクスプローラーで選択しクリック後[Alt＋Enter]キーを押下    
+[設定]ダイアログの[ビルドからリソースを除外]にチェックを入れる  
 
-7-12.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルドを行う  
-7-13. [アーカイブ]に[lib+プロジェクト名.a]が生成される（上記[5.5]で設定するのはプロジェクト名となる)  
+7-13.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルドを行う  
+7-14. [アーカイブ]に[lib+プロジェクト名.a]が生成される（上記[5.5]で設定しますのはプロジェクト名となる)  
 
-7-14.Toppersライブラリーのビルドの為、XXXよりbuild_rx7n_toppers.zipをダウンロードし解凍する
-(解凍先は以下で作成するプロジェクトと同じ階層とする)
-7-15.メニューの[ファイル]→[新規]→[Makefile Project with Existing Code]を選択  
-7-16.[既存のコードをインポート]ダイアログで[プロジェクト名]を入力し[既存のコードの場所]で[7-14]で解凍したディレクトリで[toppers/toppers_app]を指定し、[インデクサー設定に対するtoolchain]は[GCC for Renesas RX]を選択し[終了]を押下  
-7-17.以下のコマンドを実行  
+7-15.Toppersライブラリーのビルドの為、XXXよりbuild_rx7n_toppers.zipをダウンロードし解凍します
+(解凍先は以下で作成しますプロジェクトと同じ階層とします)
+7-16.メニューの[ファイル]→[新規]→[Makefile Project with Existing Code]を選択  
+7-17.[既存のコードをインポート]ダイアログで[プロジェクト名]を入力し[既存のコードの場所]で[7-14]で解凍したディレクトリで[toppers/toppers_app]を指定し、[インデクサー設定に対しますtoolchain]は[GCC for Renesas RX]を選択し[終了]を押下  
+7-18.以下のコマンドを実行  
  ```  
 $ pwd
 プロジェクトと同じディレクトリ/toppeers_app
@@ -191,9 +200,54 @@ $ perl ./toppers_rx/asp/configure -T rx72n_gcc
 $ make depend
 ```  
 (コマンド実行ではMsys又は,Cygwinが必要)  
-7-18.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルドを行う(ビルドは必ず事前に[7-17]を実施する)  
-7-19. [アーカイブ]に[libasp.a]が生成される（上記[5.5]で設定するのはプロジェクト名となる)  
+7-18.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルドを行う(ビルドは必ず事前に[7-17]を実施します)  
+7-19. [アーカイブ]に[libasp.a]が生成される（上記[5.5]で設定しますのはプロジェクト名となる)  
 7-20.ここまでで、ライブラリーの準備ができたため[1-6]で作成したプロジェクトをビルド
-7-21.ビルドで生成されたELFファイルを[メニュー]→[実行(R)]→[実行(R)]又は[デバッグ(D)]でボードへ転送を行い、実行する
-7-22.[3-1]のソース[WolfSSLDemo.c]のdefine値[#define SSL_SERVER]を定義するとサーバとしての動作になり、削除でクライアントとしての動作となる(通信相手はwolfsslサンプルにてlinux,windows,macにて作成の事)
-7-22.バーチャルコンソールにて実行を確認する
+7-21.ビルドで生成されたELFファイルを[メニュー]→[実行(R)]→[実行(R)]又は[デバッグ(D)]でボードへ転送を行い、実行します
+7-22.[3-1]のソース[WolfSSLDemo.c]のdefine値[#define SSL_SERVER]を定義しますとサーバとしての動作になり、削除でクライアントとしての動作となる(通信相手はwolfsslサンプルにてlinux,windows,macにて作成の事)
+7-22.バーチャルコンソールにて実行を確認します  
+
+ # 5.e² studioプロジェクトリンクライブラリー設定  
+  (本設定は[7.ライブラリー作成]完了後行う)  
+ 5-1.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後[Alt＋Enter]キーを押下  
+ 5-2.設定ダイアログボックス表示後、[ツール設定]タブ[linker]]設定の[Archives]を選択  
+ 5-3.ダイアログボックス[User defined archive(library) files(-I)]をボックス右上[+]を押下  
+ 5-4.[wolflib][asp]を設定(T4_Library_ether_ccrx_rxv1_littleが入っいる場合は選択後[×]を押下で削除)  
+     (例:"C:\Users\etc\wolfssl-5.0.0-stable")  
+ 5-5.ダイアログ最下部[User defined archive search directories (-L))]のボックス右上[+]を押下し       
+     Toppersライブラリー[asp]の場所、wolfライブラリー[wolflib]の場所を設定します   
+ 5-6.設定ダイアログボックス表示後、[ツール設定]タブ[linker]]設定の[Source]を選択   
+ 5-7.ダイアログボックス[Additional Input files]をボックス右上[+]を押下  
+ 5-8.ワークスペース[smc_gen/r_t4_rx/lib/gcc/libT4_Library_ether_gcc_rxv1_XXX.a](xxx  
+     はインディアン形式による)を選択し[適用して閉じる]を押下  
+
+
+
+# 補足:新規にプロジェクトを作成する場合は以下を参照ください
+# 補足1.e² studioプロジェクト作成 
+ 補足1-1.メニューの[ファイル]→[Renesas C/C++ Project]→[Renesas RX]を選択  
+ 補足1-2.プロジェクト選択BOXの[GCC for Renesas RX Executable Projec]を選択[次へ(N)]を選択  
+ 補足1-3.プロジェクト名を入力  
+ 補足1-4.[toolchain Seetings]で[C](デフォルト),ツールチェーン：[GCC for Renesas RX ](デフォルト)  
+     ツールチェーン・バージョン：[8.3.0.202202]を選択   
+ 補足1-5.[Device Seetings]でTarget Board:[RX72NEnvisionKit]をプルダウンメニューから選択  
+ 補足1-6.[次へ(N)]を選択後次画面で[終了]を選択(use Smart Configuratorはチェック)  
+
+ # 補足2.e² studioプロジェクト設定  
+ 補足2-1.プロジェクト名.scfgをダブルクリック  
+ 補足2-2.「概説」が表示されている領域の[コンポーネント]を選択  
+ 補足2-3.コンポーネントの[+]マークの[コンポーネントの追加]選択  
+ 補足2-4.[機能]プルダウンメニューから[通信]を選択  
+ 補足2-5.[Ethernet Driver][TCP/IP protocol stack]の[r_t4_driver_rx][r_t4_rx]の三つを選択後[終了]を選択  
+ 補足2-6.[r_bsp]をクリックし[プロパティ]ダイアログの 以下を変更します
+```  
+  User stack setting   2stacks
+  User stack size      0x400
+  Interrupt stack size 0x8000
+  Heap size            0xA000 　　 
+ ```
+ 補足2-7.[r_ether_rx]をクリックし[プロパティ]ダイアログの 以下を変更します
+```  
+  PHY-LSI address setting for ETHER0　　　　　　　1
+  The register bus of PHY0 for  ETHER0/ETHER1    Use ETHER0　 
+ ```
