@@ -49,7 +49,7 @@ Includes <System Includes> , "Project Includes"
 static UB guc_event[T4_CFG_SYSTEM_CHANNEL_NUMBER];
 static DHCP* gpt_dhcp[T4_CFG_SYSTEM_CHANNEL_NUMBER];
 
-
+ 
 /******************************************************************************
 Exported global variables and functions (to be accessed by other files)
 ******************************************************************************/
