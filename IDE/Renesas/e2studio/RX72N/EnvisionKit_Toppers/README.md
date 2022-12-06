@@ -41,10 +41,9 @@ export PATH=PATH=$PATH:\/C/ProgramData\/GCC\ for\ Renesas\ RX\ 8.3.0.202202-GNUR
  1-14.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルドを行う(ビルドは必ず事前に[7-17]を実施します)  
  1-15. [アーカイブ]に[libasp.a]が生成されます
 
-# 2.e² studioプロジェクト作成 
+# 2.wolfSSLDemoプロジェクトの修正 
  2-1.メニューの[ファイル・システムからプロジェクトを開く...]を選択  
- 2-2.git レポジトリwolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppersの[wolflib]を選択[フォルダーの選択]を押下 (既に本ディレクトリーを含んだwolfsslの環境を展開済みとしてください)  
- 2-3.[プロジェクトをインポート]ダイアログの[プロジェクト(P)] チェックボックスを選択後[終了(F)]を押下   
+ 2-2.git レポジトリwolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppersの[wolfSSLDemo]を選択[フォルダーの選択]を押下
  2-4.[WolfSSLDemo.scfg]をダブルクリックで設定ダイアログが表示→[コンポーネントタブ] を選択     
  2-5.[ソフトウェアコンポーネントダイアログ]ダイアログ右上の[コードの生成]を押下      
  
