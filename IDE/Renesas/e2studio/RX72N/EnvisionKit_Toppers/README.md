@@ -131,7 +131,7 @@ smc_gen\r_t4_driver_rx\src\t4_driver.c
 ```
 
 # 4.wolfSSLDemoプロジェクトのビルド  
- 4-1.[3-1.]終了後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルド 
+ 4-1.[3-1.]終了後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルド   
  4-2.ビルドで生成されたELFファイルを[メニュー]→[実行(R)]→[実行(R)]又は[デバッグ(D)]でボードへ転送を行い、実行します  
  4-3.[WolfSSLDemo.c]のdefine値[#define SSL_SERVER]を定義を行うとサーバとしての動作になり、削除でクライアントとしての動作となる(通信相手はwolfsslサンプルにてlinux,windows,macにて作成の事)  
  4-4.[Renesas Debug Virtual Console]にて実行を確認します  
