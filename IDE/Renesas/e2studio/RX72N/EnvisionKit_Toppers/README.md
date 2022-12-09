@@ -5,46 +5,43 @@
 # 本デモについては以下が必要です 
 
 1.Renesas e² studio Version: 2022-07 (22.7.0)以降   
-2.Toopers OS 1.91.1 Renesas RX72N適用バージョン   
-3.WolfSSL Release 5.0.0 以降 (gitレポジトリーより入手)  
+2.Toppers OS 1.91.1 Renesas RX72N適用バージョン(gitレポジトリーより入手)    
+3.WolfSSL Release 5.X.0 以降 (gitレポジトリーより入手)  
 
 # 以下に環境構築手順を示します
  # 1.ライブラリー作成
   本デモに必要なToppersライブラリー、wolfSSLライブラリーを作成します  
- 1-1.メニューの[ファイル]→[インポート(I)...]→[既存プロジェクトをワークスペースへ]→[次へ]を選択  
- 1-2.[プロジェクトをインポート]ダイアログの[ルートディレクトリーの選択(T)]の[参照(R)]を押下  
- 1-3.git レポジトリwolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppersの[wolflib]を選択[フォルダーの選択]を押下      
- 1-4.ダイアログボックス右上[+]を押下しディレクトリを選択[wolflib]と同じ階層にある[WolfDemo]をワークスペース又はファイルシステムより設定  
- 1-5.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルドを行う  
- 1-6. [wolflib/Debug]に[libwolflib.a]が生成されます
-
- 1-10.Toppersライブラリーのビルドの為、[https://github.com/nekoman2187/RenesasRX72NEnvisionKitwithToppers]よりgit clone又はダウンロードし解凍します  
- 1-11.メニューの[ファイル]→[新規]→[Makefile Project with Existing Code]を選択  
- 1-12.[既存のコードをインポート]ダイアログで[プロジェクト名]を入力し[既存のコードの場所]で[7-14]で解凍したディレクトリで[toppers/toppers_app]を指定し、[インデクサー設定に対しますtoolchain]は[GCC for Renesas RX]を選択し[終了]を押下  
- 1-13.以下のコマンドを実行  
- ```  
-$ pwd
-プロジェクトと同じディレクトリ/toppeers_app
-$ perl ./toppers_rx/asp/configure -T rx72n_gcc
-$ make depend
-```  
-(コマンド実行ではMsys2等の環境を事前にご用意ください)
-(Msys2でgccのツールチェーンのインストールを行う)
-(事前にRenesas環境のパス設定を行う.bashrc等)    
-(設定例：ルネサスツールチェーンパスを指定)    
+ 1-1.[プロジェクトをインポート]ダイアログの[ルートディレクトリーの選択(T)]の[参照(R)]を押下  
+ 1-2.git レポジトリwolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppersの[wolflib]を選択[フォルダーの選択]を押下      
+ 1-3.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルドを行う  
+ 1-4. [wolflib/Debug]に[libwolflib.a]が生成されます  
+ 1-5.Toppersライブラリーのビルドの為、[https://github.com/nekoman2187/RenesasRX72NwithToppers]よりgit clone又はダウンロードし解凍します 
+ 1-7.事前準備確認
+   コマンド実行ではMsys2等の環境を事前にご用意ください  
+   Msys2でgccのツールチェーンのインストールを行ってください  
+   Msys2環境では事前にRenesas環境のパス設定を行う必要があります.bashrc等      
+---設定例を示します：ルネサスツールチェーンパスを指定---      
  ```  
 export PATH=PATH=$PATH:\/C/ProgramData\/GCC\ for\ Renesas\ RX\ 8.3.0.202202-GNURX-ELF/rx-elf/rx-elf/bin
  ``` 
- 1-14.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルドを行う(ビルドは必ず事前に[7-17]を実施します)  
- 1-15. [アーカイブ]に[libasp.a]が生成されます
+　1-8.設定を確認後、以下を行います
 
+  ```  
+$ pwd
+[個別インストール環境]/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/RenesasRX72NwithToppers
+$ perl ./asp/configure -T rx72n_gcc
+$ make depend
+```  
+ 1-9.[1-7.]終了後、前述[1-1./1-2.]同様、[Toppers_app]を選択[フォルダーの選択]を押下  
+ 1-10.[1-3.]同様ビルドを行うと「toppers_rx]に[libasplib]が生成されます    
+ 
 # 2.wolfSSLDemoプロジェクトの修正 
  2-1.メニューの[ファイル・システムからプロジェクトを開く...]を選択  
- 2-2.git レポジトリwolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppersの[wolfSSLDemo]を選択[フォルダーの選択]を押下
- 2-4.[WolfSSLDemo.scfg]をダブルクリックで設定ダイアログが表示→[コンポーネントタブ] を選択     
- 2-5.[ソフトウェアコンポーネントダイアログ]ダイアログ右上の[コードの生成]を押下      
+ 2-2.git レポジトリwolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppersの[wolfSSLDemo]を選択[フォルダーの選択]を押下  
+ 2-3.[WolfSSLDemo.scfg]をダブルクリックで設定ダイアログが表示→[コンポーネントタブ] を選択  
+ 2-4.[ソフトウェアコンポーネントダイアログ]ダイアログ右上の[コードの生成]を押下      
  
- 2-6.以下を修正  
+ 2-5.生成されたBSPコードの以下を修正  
 ```
 smc_gen\r_t4_driver_rx\src\t4_driver.c  
 #include "r_tsip_rx_if.h"  
@@ -136,8 +133,8 @@ smc_gen\r_t4_driver_rx\src\t4_driver.c
 ```
 
 # 4.wolfSSLDemoプロジェクトのビルド  
- 4-1.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルドを行う  
+ 4-1.[3-1.]終了後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルド 
  4-2.ビルドで生成されたELFファイルを[メニュー]→[実行(R)]→[実行(R)]又は[デバッグ(D)]でボードへ転送を行い、実行します  
  4-3.[WolfSSLDemo.c]のdefine値[#define SSL_SERVER]を定義を行うとサーバとしての動作になり、削除でクライアントとしての動作となる(通信相手はwolfsslサンプルにてlinux,windows,macにて作成の事)  
- 4-4.バーチャルコンソールにて実行を確認します  
+ 4-4.[Renesas Debug Virtual Console]にて実行を確認します  
 
