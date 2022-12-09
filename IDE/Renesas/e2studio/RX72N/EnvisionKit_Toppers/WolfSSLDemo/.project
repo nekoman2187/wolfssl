@@ -34,11 +34,10 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/wolfDemo/linker_script.ld</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/ASPs/asp/target/rx72n_gcc/linker_script.ld</locationURI>
-		</link>
-	</linkedResources>
+	<variableList>
+		<variable>
+			<name>RX720_TAGERT_LOC</name>
+			<value>file:/D:/1204NEWREPVS/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/RenesasRX72NwithToppers/asp/target/rx72n_gcc</value>
+		</variable>
+	</variableList>
 </projectDescription>

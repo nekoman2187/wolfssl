@@ -54,7 +54,7 @@
 							<tool id="com.renesas.cdt.managedbuild.gcc.rx.tool.compilerC.429593477" name="Compiler" superClass="com.renesas.cdt.managedbuild.gcc.rx.tool.compilerC">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.renesas.cdt.managedbuild.gcc.core.option.compiler.includes.includeFileDir.1912623967" name="Include file directories (-I)" superClass="com.renesas.cdt.managedbuild.gcc.core.option.compiler.includes.includeFileDir" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;..\..\wolfDemo\&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;..\..\WolfSSLDemo\src\wolfDemo\&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;&quot;..\..\..\..\..\..\..\&quot;&quot;"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="true" id="com.renesas.cdt.managedbuild.gcc.core.option.compiler.source.userDefinedCompilerOptions.1706427517" name="User defined compiler options" superClass="com.renesas.cdt.managedbuild.gcc.core.option.compiler.source.userDefinedCompilerOptions" useByScannerDiscovery="false" valueType="stringList"/>

@@ -7,7 +7,6 @@
                 <option id="com.renesas.smc.toolchain.option.language" key="com.renesas.smc.toolchain.option.language.c"/>
                 <option id="com.renesas.smc.toolchain.option.buildArtefactType" key="com.renesas.smc.toolchain.option.buildArtefactType.exe"/>
                 <option id="com.renesas.smc.toolchain.option.rtos" key="com.renesas.smc.toolchain.option.rtos.none"/>
-                <option id="com.renesas.smc.toolchain.option.dual" key="com.renesas.smc.toolchain.option.dual.false"/>
             </toolchain>
         </configuration>
         <platform id="R5F572NDHxFB"/>
@@ -444,7 +443,7 @@
         <Item currentVect="110" groupchild="&lt;br&gt;1-TEI0&lt;br&gt;2-ERI0&lt;br&gt;3-TEI1&lt;br&gt;4-ERI1&lt;br&gt;5-TEI2&lt;br&gt;6-ERI2&lt;br&gt;7-TEI3&lt;br&gt;8-ERI3&lt;br&gt;9-TEI4&lt;br&gt;10-ERI4&lt;br&gt;11-TEI5&lt;br&gt;12-ERI5&lt;br&gt;13-TEI6&lt;br&gt;14-ERI6&lt;br&gt;15-TEI12&lt;br&gt;16-ERI12&lt;br&gt;17-SCIX0&lt;br&gt;18-SCIX1&lt;br&gt;19-SCIX2&lt;br&gt;20-SCIX3&lt;br&gt;21-QSPSSLI&lt;br&gt;22-FERRI&lt;br&gt;23-MENDI&lt;br&gt;24-OVFI&lt;br&gt;25-DOPCI&lt;br&gt;26-PCFEI&lt;br&gt;27-PCERI" id="BL0" priority="15" usedState="未使用"/>
         <Item currentVect="111" groupchild="&lt;br&gt;1-CDETI&lt;br&gt;2-CACI&lt;br&gt;3-SDACI&lt;br&gt;4-CDETIO&lt;br&gt;5-ERRIO&lt;br&gt;6-ACCIO&lt;br&gt;7-OEI1&lt;br&gt;8-OEI2&lt;br&gt;9-OEI3&lt;br&gt;10-OEI4&lt;br&gt;11-TEI0&lt;br&gt;12-EEI0&lt;br&gt;13-TEI2&lt;br&gt;14-EEI2&lt;br&gt;15-SSIF0&lt;br&gt;16-SSIF1&lt;br&gt;17-S12CMPAI&lt;br&gt;18-S12CMPBI&lt;br&gt;19-S12CMPAI1&lt;br&gt;20-S12CMPBI1&lt;br&gt;21-TEI1&lt;br&gt;22-EEI1" id="BL1" priority="15" usedState="未使用"/>
         <Item currentVect="112" groupchild="&lt;br&gt;1-TEI8&lt;br&gt;2-ERI8&lt;br&gt;3-TEI9&lt;br&gt;4-ERI9&lt;br&gt;5-TEI10&lt;br&gt;6-ERI10&lt;br&gt;7-TEI11&lt;br&gt;8-ERI11&lt;br&gt;9-SPII0&lt;br&gt;10-SPEI0&lt;br&gt;11-SPII1&lt;br&gt;12-SPEI1&lt;br&gt;13-SPII2&lt;br&gt;14-SPEI2&lt;br&gt;15-TEI7&lt;br&gt;16-ERI7" id="AL0" priority="15" usedState="未使用"/>
-        <Item currentVect="113" groupchild="&lt;br&gt;1-MINT&lt;br&gt;2-PINT&lt;br&gt;3-EINT0&lt;br&gt;4-EINT1&lt;br&gt;5-VPOS&lt;br&gt;6-GR1UF&lt;br&gt;7-GR2UF&lt;br&gt;8-DRW_IRQ" id="AL1" priority="2" usedState="使用中"/>
+        <Item currentVect="113" groupchild="&lt;br&gt;1-MINT&lt;br&gt;2-PINT&lt;br&gt;3-EINT0&lt;br&gt;4-EINT1&lt;br&gt;5-VPOS&lt;br&gt;6-GR1UF&lt;br&gt;7-GR2UF&lt;br&gt;8-DRW_IRQ" id="AL1" priority="2" usedState="未使用"/>
         <Item currentVect="114" id="SCI11_RXI11" priority="15" usedState="未使用"/>
         <Item currentVect="115" id="SCI11_TXI11" priority="15" usedState="未使用"/>
         <Item currentVect="116" id="SCI12_RXI12" priority="15" usedState="未使用"/>
@@ -581,39 +580,39 @@
         <Item currentVect="249" defaultVect="249" id="MTU8_TGID8" priority="15" usedState="未使用"/>
         <Item currentVect="250" defaultVect="250" id="MTU8_TCIV8" priority="15" usedState="未使用"/>
         <Item currentVect="251" defaultVect="251" id="EPTPC_IPLS" priority="15" usedState="未使用"/>
-        <Item currentVect="252" defaultVect="252" id="PMGI0_PMGI0I" priority="2" usedState="使用中"/>
-        <Item currentVect="253" defaultVect="253" id="PMGI1_PMGI1I" priority="2" usedState="使用中"/>
+        <Item currentVect="252" defaultVect="252" id="PMGI0_PMGI0I" priority="2" usedState="未使用"/>
+        <Item currentVect="253" defaultVect="253" id="PMGI1_PMGI1I" priority="2" usedState="未使用"/>
         <Item currentVect="254" id="PERIA_INTA254" priority="15" usedState="未使用"/>
         <Item currentVect="255" id="PERIA_INTA255" priority="15" usedState="未使用"/>
     </tool>
     <tool id="Pins" version="1.0.1.0">
         <pinItem allocation="10" comments="" direction="None" id="EMLE" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="20" comments="" direction="None" id="XTAL" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="50" comments="" direction="None" id="CLKOUT25M" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="28" comments="" direction="None" id="TMS" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="65" comments="" direction="None" id="ET0_TX_EN" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="67" comments="" direction="None" id="ET0_TX_ER" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="85" comments="" direction="None" id="ET0_MDC" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="60" comments="" direction="None" id="ET0_COL" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="58" comments="" direction="None" id="ET0_CRS" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="50" comments="" direction="None" id="CLKOUT25M" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="28" comments="" direction="None" id="TMS" isUsedBySoftware="true" locked="false" operationMode="" status="65280"/>
+        <pinItem allocation="65" comments="" direction="None" id="ET0_TX_EN" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="67" comments="" direction="None" id="ET0_TX_ER" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="85" comments="" direction="None" id="ET0_MDC" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="60" comments="" direction="None" id="ET0_COL" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="58" comments="" direction="None" id="ET0_CRS" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
         <pinItem allocation="22" comments="" direction="None" id="EXTAL" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="25" comments="" direction="None" id="TRST#" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="70" comments="" direction="None" id="ET0_RX_DV" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="68" comments="" direction="None" id="ET0_RX_ER" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="61" comments="" direction="None" id="ET0_ETXD3" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="62" comments="" direction="None" id="ET0_ETXD2" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="63" comments="" direction="None" id="ET0_ETXD1" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="64" comments="" direction="None" id="ET0_ETXD0" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="69" comments="" direction="None" id="ET0_RX_CLK" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="75" comments="" direction="None" id="ET0_ERXD3" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="73" comments="" direction="None" id="ET0_ERXD2" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="72" comments="" direction="None" id="ET0_ERXD1" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="71" comments="" direction="None" id="ET0_ERXD0" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="66" comments="" direction="None" id="ET0_TX_CLK" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="86" comments="" direction="None" id="ET0_MDIO" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="30" comments="" direction="None" id="TCK" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="29" comments="" direction="None" id="TDI" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="31" comments="" direction="None" id="TDO" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="25" comments="" direction="None" id="TRST#" isUsedBySoftware="true" locked="false" operationMode="" status="65280"/>
+        <pinItem allocation="70" comments="" direction="None" id="ET0_RX_DV" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="68" comments="" direction="None" id="ET0_RX_ER" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="61" comments="" direction="None" id="ET0_ETXD3" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="62" comments="" direction="None" id="ET0_ETXD2" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="63" comments="" direction="None" id="ET0_ETXD1" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="64" comments="" direction="None" id="ET0_ETXD0" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="69" comments="" direction="None" id="ET0_RX_CLK" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="75" comments="" direction="None" id="ET0_ERXD3" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="73" comments="" direction="None" id="ET0_ERXD2" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="72" comments="" direction="None" id="ET0_ERXD1" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="71" comments="" direction="None" id="ET0_ERXD0" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="66" comments="" direction="None" id="ET0_TX_CLK" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="86" comments="" direction="None" id="ET0_MDIO" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="30" comments="" direction="None" id="TCK" isUsedBySoftware="true" locked="false" operationMode="" status="65280"/>
+        <pinItem allocation="29" comments="" direction="None" id="TDI" isUsedBySoftware="true" locked="false" operationMode="" status="65280"/>
+        <pinItem allocation="31" comments="" direction="None" id="TDO" isUsedBySoftware="true" locked="false" operationMode="" status="65280"/>
         <pinnumItem comment="LCD-B4" id="88"/>
         <pinnumItem comment="LCD-B5" id="89"/>
         <pinnumItem comment="LCD-R7" id="110"/>
@@ -885,14 +884,14 @@
             <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
         </configuration>
         <configuration inuse="true" name="r_cmt_rx">
-            <component description="依存モジュール: r_bsp バージョン 7.20&#10;This module creates a timer tick using a CMT channel based on a frequency input by the user." detailDescription="CMT driver" display="r_cmt_rx" id="r_cmt_rx5.20" version="5.20">
+            <component description="依存モジュール: r_bsp バージョン 7.10&#10;This module creates a timer tick using a CMT channel based on a frequency input by the user." detailDescription="CMT driver" display="r_cmt_rx" id="r_cmt_rx5.10" version="5.10">
                 <gridItem id="CMT_RX_CFG_IPR" selectedIndex="5"/>
             </component>
             <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
             <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
         </configuration>
         <configuration inuse="true" name="r_ether_rx">
-            <component description="依存モジュール: r_bsp バージョン 5.52&#10;The Ethernet fit module provides a method to send and receive Ethernet / IEEE802.3 frame using Ethernet controller (ETHERC), Ethernet DMA controller (EDMAC)." detailDescription="Ethernet Driver." display="r_ether_rx" id="r_ether_rx1.23" version="1.23">
+            <component description="依存モジュール: r_bsp バージョン 5.52&#10;The Ethernet fit module provides a method to send and receive Ethernet / IEEE802.3 frame using Ethernet controller (ETHERC), Ethernet DMA controller (EDMAC)." detailDescription="Ethernet Driver." display="r_ether_rx" id="r_ether_rx1.22" version="1.22">
                 <gridItem id="CLKOUT25M" selectedIndex="1"/>
                 <gridItem id="ET0_TX_CLK" selectedIndex="1"/>
                 <gridItem id="ET0_RX_CLK" selectedIndex="1"/>
