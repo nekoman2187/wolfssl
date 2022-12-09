@@ -41,16 +41,14 @@ $ make depend
  2-3.[WolfSSLDemo.scfg]をダブルクリックで設定ダイアログが表示→[コンポーネントタブ] を選択  
  2-4.[ソフトウェアコンポーネントダイアログ]ダイアログ右上の[コードの生成]を押下      
  
- 2-5.生成されたBSPコードの以下を修正  
-```
-smc_gen\r_t4_driver_rx\src\t4_driver.c  
-#include "r_tsip_rx_if.h"  
-  ↓  修正  
-//#include "r_tsip_rx_if.h"  
-```
  # 3.e² studio BSP修正
  3-1.生成されたBSPをToppersに適用する為、以下の変更及び修正を加えます  
  ```  
+smc_gen\r_t4_driver_rx\src\t4_driver.c  
+#include "r_tsip_rx_if.h"  
+  ↓  修正  
+//#include "r_tsip_rx_if.h"
+
 smc_gen\general\r_cg_hardware_setup.c  
 void R_Systeminit(void)  
     R_Interrupt_Create();  が存在した場合
