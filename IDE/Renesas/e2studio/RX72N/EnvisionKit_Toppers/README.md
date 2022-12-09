@@ -16,7 +16,7 @@
  1-3.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルドを行う  
  1-4. [wolflib/Debug]に[libwolflib.a]が生成されます  
  1-5.Toppersライブラリーのビルドの為、[https://github.com/nekoman2187/RenesasRX72NwithToppers]よりgit clone又はダウンロードし解凍します  
- 1-6.事前準備確認
+ 1-6.事前準備確認  
    コマンド実行ではMsys2等の環境を事前にご用意ください  
    Msys2でgccのツールチェーンのインストールを行ってください  
    Msys2環境では事前にRenesas環境のパス設定を行う必要があります.bashrc等      
@@ -33,7 +33,7 @@ $ perl ./asp/configure -T rx72n_gcc
 $ make depend
 ```  
  1-9.[1-7.]終了後、前述[1-1./1-2.]同様、[Toppers_app]を選択[フォルダーの選択]を押下  
- 1-10.[1-3.]同様ビルドを行うと「toppers_rx]に[libasplib]が生成されます    
+ 1-10.[1-3.]同様ビルドを行うと「toppers_rx]に[libasp.a]が生成されます    
  
 # 2.wolfSSLDemoプロジェクトの修正 
  2-1.メニューの[ファイル・システムからプロジェクトを開く...]を選択  
