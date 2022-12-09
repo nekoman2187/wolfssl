@@ -1,0 +1,6 @@
+#
+#		Driver Makefile (tinet_shell)
+#
+
+SYSSVC_DIR := $(SYSSVC_DIR) $(MIDDLEWAREDIR)/tinet_shell
+SYSSVC_COBJS := $(SYSSVC_COBJS) shell.o  tinet_shell.o

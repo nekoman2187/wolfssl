@@ -1,0 +1,15 @@
+PACKAGE asp_tinet_netdev_if_rx62n
+
+MANIFEST
+Makefile.tinet
+ether_phy.c
+ether_phy.h
+if_rx62n.c
+if_rx62n.cfg
+if_rx62n.h
+if_rx62nreg.h
+nic.cfg
+nic_asp.cfg
+nic_rename.h
+tinet_nic_config.h
+tinet_nic_defs.h

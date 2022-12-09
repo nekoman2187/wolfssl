@@ -36,84 +36,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>src/Readme</name>
+			<name>src/wolfDemo/linker_script.ld</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/wolfDemo/Readme</locationURI>
-		</link>
-		<link>
-			<name>src/WolfSSLDemo.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/wolfDemo/WolfSSLDemo.c</locationURI>
-		</link>
-		<link>
-			<name>src/WolfSSLDemo.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/wolfDemo/WolfSSLDemo.h</locationURI>
-		</link>
-		<link>
-			<name>src/dhcp_client.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/wolfDemo/dhcp_client.c</locationURI>
-		</link>
-		<link>
-			<name>src/dhcp_client.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/wolfDemo/dhcp_client.h</locationURI>
-		</link>
-		<link>
-			<name>src/kernel.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/wolfDemo/kernel.h</locationURI>
-		</link>
-		<link>
-			<name>src/kernel_id.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/wolfDemo/kernel_id.h</locationURI>
-		</link>
-		<link>
-			<name>src/ri_cmt.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/wolfDemo/ri_cmt.h</locationURI>
-		</link>
-		<link>
-			<name>src/strings.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/wolfDemo/strings.h</locationURI>
-		</link>
-		<link>
-			<name>src/unistd.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/wolfDemo/unistd.h</locationURI>
-		</link>
-		<link>
-			<name>src/user_settings.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/wolfDemo/user_settings.h</locationURI>
-		</link>
-		<link>
-			<name>src/wolf_client.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/wolfDemo/wolf_client.c</locationURI>
-		</link>
-		<link>
-			<name>src/wolf_console.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/wolfDemo/wolf_console.c</locationURI>
-		</link>
-		<link>
-			<name>src/wolf_demo.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/wolfDemo/wolf_demo.h</locationURI>
-		</link>
-		<link>
-			<name>src/wolf_server.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/wolfDemo/wolf_server.c</locationURI>
-		</link>
-		<link>
-			<name>src/wolfssl_dummy.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/wolfDemo/wolfssl_dummy.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/ASPs/asp/target/rx72n_gcc/linker_script.ld</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

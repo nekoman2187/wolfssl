@@ -7,6 +7,7 @@
                 <option id="com.renesas.smc.toolchain.option.language" key="com.renesas.smc.toolchain.option.language.c"/>
                 <option id="com.renesas.smc.toolchain.option.buildArtefactType" key="com.renesas.smc.toolchain.option.buildArtefactType.exe"/>
                 <option id="com.renesas.smc.toolchain.option.rtos" key="com.renesas.smc.toolchain.option.rtos.none"/>
+                <option id="com.renesas.smc.toolchain.option.dual" key="com.renesas.smc.toolchain.option.dual.false"/>
             </toolchain>
         </configuration>
         <platform id="R5F572NDHxFB"/>
@@ -589,14 +590,14 @@
         <pinItem allocation="10" comments="" direction="None" id="EMLE" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="20" comments="" direction="None" id="XTAL" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="50" comments="" direction="None" id="CLKOUT25M" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="28" comments="" direction="None" id="TMS" isUsedBySoftware="true" locked="false" operationMode="" status="65280"/>
+        <pinItem allocation="28" comments="" direction="None" id="TMS" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="65" comments="" direction="None" id="ET0_TX_EN" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="67" comments="" direction="None" id="ET0_TX_ER" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="85" comments="" direction="None" id="ET0_MDC" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="60" comments="" direction="None" id="ET0_COL" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="58" comments="" direction="None" id="ET0_CRS" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="22" comments="" direction="None" id="EXTAL" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="25" comments="" direction="None" id="TRST#" isUsedBySoftware="true" locked="false" operationMode="" status="65280"/>
+        <pinItem allocation="25" comments="" direction="None" id="TRST#" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="70" comments="" direction="None" id="ET0_RX_DV" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="68" comments="" direction="None" id="ET0_RX_ER" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="61" comments="" direction="None" id="ET0_ETXD3" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
@@ -610,9 +611,9 @@
         <pinItem allocation="71" comments="" direction="None" id="ET0_ERXD0" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="66" comments="" direction="None" id="ET0_TX_CLK" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="86" comments="" direction="None" id="ET0_MDIO" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="30" comments="" direction="None" id="TCK" isUsedBySoftware="true" locked="false" operationMode="" status="65280"/>
-        <pinItem allocation="29" comments="" direction="None" id="TDI" isUsedBySoftware="true" locked="false" operationMode="" status="65280"/>
-        <pinItem allocation="31" comments="" direction="None" id="TDO" isUsedBySoftware="true" locked="false" operationMode="" status="65280"/>
+        <pinItem allocation="30" comments="" direction="None" id="TCK" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="29" comments="" direction="None" id="TDI" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="31" comments="" direction="None" id="TDO" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinnumItem comment="LCD-B4" id="88"/>
         <pinnumItem comment="LCD-B5" id="89"/>
         <pinnumItem comment="LCD-R7" id="110"/>
@@ -787,8 +788,111 @@
             <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
             <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
         </configuration>
+        <configuration inuse="true" name="r_t4_driver_rx">
+            <component description="依存モジュール: r_bsp バージョン 5.61&#10;依存モジュール: r_ether_rx バージョン 1.21&#10;依存モジュール: r_sys_time_rx バージョン 1.01&#10;依存モジュール: r_t4_rx バージョン 2.10&#10;Convert the TCP/IP(T4) - RX Ethernet Driver Interface." detailDescription="TCP/IP protocol stack [M3S-T4-Tiny] - RX Ethernet Driver Interface" display="r_t4_driver_rx" id="r_t4_driver_rx1.09" version="1.09"/>
+            <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
+            <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
+        </configuration>
+        <configuration inuse="true" name="r_t4_rx">
+            <component description="依存モジュール: r_t4_driver_rx バージョン 1.09&#10;T4 is TCP/IP protocol stack that has small footprint for Renesas MCUs." detailDescription="TCP/IP protocol stack [M3S-T4-Tiny] for Renesas MCUs" display="r_t4_rx" id="r_t4_rx2.10" version="2.10">
+                <gridItem id="T4_CFG_SYSTEM_CHANNEL_NUMBER" selectedIndex="0"/>
+                <gridItem id="T4_CFG_SYSTEM_DHCP" selectedIndex="1"/>
+                <gridItem id="T4_CFG_FIXED_IP_ADDRESS_CH0" selectedIndex="192,168,0,3"/>
+                <gridItem id="T4_CFG_FIXED_SABNET_MASK_CH0" selectedIndex="255,255,255,0"/>
+                <gridItem id="T4_CFG_FIXED_GATEWAY_ADDRESS_CH0" selectedIndex="0,0,0,0"/>
+                <gridItem id="T4_CFG_FIXED_IP_ADDRESS_CH1" selectedIndex="192,168,0,10"/>
+                <gridItem id="T4_CFG_FIXED_SABNET_MASK_CH1" selectedIndex="255,255,255,0"/>
+                <gridItem id="T4_CFG_FIXED_GATEWAY_ADDRESS_CH1" selectedIndex="0,0,0,0"/>
+                <gridItem id="T4_CFG_ETHER_CH0_MAC_ADDRESS" selectedIndex="0x74,0x90,0x50,0x10,0xFE,0x77"/>
+                <gridItem id="T4_CFG_ETHER_CH1_MAC_ADDRESS" selectedIndex="0x74,0x90,0x50,0x00,0x79,0x79"/>
+                <gridItem id="T4_CFG_SYSTEM_CALLBACK_FUNCTION_USE" selectedIndex="1"/>
+                <gridItem id="T4_CFG_SYSTEM_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="system_callback"/>
+                <gridItem id="T4_CFG_TCP_REPID1_PORT_NUMBER" selectedIndex="1024"/>
+                <gridItem id="T4_CFG_TCP_REPID2_PORT_NUMBER" selectedIndex="1025"/>
+                <gridItem id="T4_CFG_TCP_REPID3_PORT_NUMBER" selectedIndex="1026"/>
+                <gridItem id="T4_CFG_TCP_REPID4_PORT_NUMBER" selectedIndex="1027"/>
+                <gridItem id="T4_CFG_TCP_CEPID1_CHANNEL" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID1_RECEIVE_WINDOW_SIZE" selectedIndex="1460"/>
+                <gridItem id="T4_CFG_TCP_CEPID1_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID1_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID1_KEEPALIVE_ENABLE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID2_CHANNEL" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID2_RECEIVE_WINDOW_SIZE" selectedIndex="1460"/>
+                <gridItem id="T4_CFG_TCP_CEPID2_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID2_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID2_KEEPALIVE_ENABLE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID3_CHANNEL" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID3_RECEIVE_WINDOW_SIZE" selectedIndex="1460"/>
+                <gridItem id="T4_CFG_TCP_CEPID3_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID3_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID3_KEEPALIVE_ENABLE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID4_CHANNEL" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID4_RECEIVE_WINDOW_SIZE" selectedIndex="1460"/>
+                <gridItem id="T4_CFG_TCP_CEPID4_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID4_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID4_KEEPALIVE_ENABLE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID5_CHANNEL" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID5_RECEIVE_WINDOW_SIZE" selectedIndex="1460"/>
+                <gridItem id="T4_CFG_TCP_CEPID5_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID5_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID5_KEEPALIVE_ENABLE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID6_CHANNEL" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID6_RECEIVE_WINDOW_SIZE" selectedIndex="1460"/>
+                <gridItem id="T4_CFG_TCP_CEPID6_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID6_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_CEPID6_KEEPALIVE_ENABLE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_TCP_MSS" selectedIndex="1460"/>
+                <gridItem id="T4_CFG_TCP_2MSL_TIME" selectedIndex="60"/>
+                <gridItem id="T4_CFG_TCP_MAX_TIMEOUT_PERIOD" selectedIndex="600"/>
+                <gridItem id="T4_CFG_TCP_DIVIDE_SENDING_PACKET" selectedIndex="1"/>
+                <gridItem id="T4_CFG_TCP_KEEPALIVE_START" selectedIndex="7200"/>
+                <gridItem id="T4_CFG_TCP_KEEPALIVE_INTERVAL" selectedIndex="10"/>
+                <gridItem id="T4_CFG_TCP_KEEPALIVE_COUNT" selectedIndex="10"/>
+                <gridItem id="T4_CFG_UDP_CEPID1_CHANNEL" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_CEPID1_PORT_NUMBER" selectedIndex="1365"/>
+                <gridItem id="T4_CFG_UDP_CEPID1_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_CEPID1_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_CEPID2_CHANNEL" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_CEPID2_PORT_NUMBER" selectedIndex="1366"/>
+                <gridItem id="T4_CFG_UDP_CEPID2_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_CEPID2_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_CEPID3_CHANNEL" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_CEPID3_PORT_NUMBER" selectedIndex="1367"/>
+                <gridItem id="T4_CFG_UDP_CEPID3_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_CEPID3_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_CEPID4_CHANNEL" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_CEPID4_PORT_NUMBER" selectedIndex="1368"/>
+                <gridItem id="T4_CFG_UDP_CEPID4_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_CEPID4_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_CEPID5_CHANNEL" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_CEPID5_PORT_NUMBER" selectedIndex="1369"/>
+                <gridItem id="T4_CFG_UDP_CEPID5_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_CEPID5_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_CEPID6_CHANNEL" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_CEPID6_PORT_NUMBER" selectedIndex="1370"/>
+                <gridItem id="T4_CFG_UDP_CEPID6_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_CEPID6_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
+                <gridItem id="T4_CFG_UDP_MULTICAST_TTL" selectedIndex="1"/>
+                <gridItem id="T4_CFG_UDP_BEHAVIOR_OF_RECEIVED_ZERO_CHECKSUM" selectedIndex="0"/>
+                <gridItem id="T4_CFG_IP_ARP_CACHE_TABLE_COUNT" selectedIndex="3"/>
+            </component>
+            <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
+            <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
+        </configuration>
+        <configuration inuse="true" name="r_sys_time_rx">
+            <component description="依存モジュール: r_bsp バージョン 5.20&#10;依存モジュール: r_cmt_rx バージョン 4.00&#10;Generic system timer for RX MCUs using CMT module." detailDescription="Generic system timer for RX MCUs using CMT module." display="r_sys_time_rx" id="r_sys_time_rx1.01" version="1.01"/>
+            <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
+            <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
+        </configuration>
+        <configuration inuse="true" name="r_cmt_rx">
+            <component description="依存モジュール: r_bsp バージョン 7.20&#10;This module creates a timer tick using a CMT channel based on a frequency input by the user." detailDescription="CMT driver" display="r_cmt_rx" id="r_cmt_rx5.20" version="5.20">
+                <gridItem id="CMT_RX_CFG_IPR" selectedIndex="5"/>
+            </component>
+            <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
+            <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
+        </configuration>
         <configuration inuse="true" name="r_ether_rx">
-            <component description="依存モジュール: r_bsp バージョン 5.52&#10;The Ethernet fit module provides a method to send and receive Ethernet / IEEE802.3 frame using Ethernet controller (ETHERC), Ethernet DMA controller (EDMAC)." detailDescription="Ethernet Driver." display="r_ether_rx" id="r_ether_rx1.22" version="1.22">
+            <component description="依存モジュール: r_bsp バージョン 5.52&#10;The Ethernet fit module provides a method to send and receive Ethernet / IEEE802.3 frame using Ethernet controller (ETHERC), Ethernet DMA controller (EDMAC)." detailDescription="Ethernet Driver." display="r_ether_rx" id="r_ether_rx1.23" version="1.23">
                 <gridItem id="CLKOUT25M" selectedIndex="1"/>
                 <gridItem id="ET0_TX_CLK" selectedIndex="1"/>
                 <gridItem id="ET0_RX_CLK" selectedIndex="1"/>
@@ -894,109 +998,6 @@
                 <gridItem id="ETHER_CFG_PMGI_HOLD_TIME" selectedIndex="0"/>
                 <gridItem id="ETHER_CFG_PMGI_CAPTURE_TIME" selectedIndex="0"/>
                 <gridItem id="ETHER_CFG_PMGI_INT_PRIORTY" selectedIndex="1"/>
-            </component>
-            <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
-            <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
-        </configuration>
-        <configuration inuse="true" name="r_t4_driver_rx">
-            <component description="依存モジュール: r_bsp バージョン 5.61&#10;依存モジュール: r_ether_rx バージョン 1.21&#10;依存モジュール: r_sys_time_rx バージョン 1.01&#10;依存モジュール: r_t4_rx バージョン 2.10&#10;Convert the TCP/IP(T4) - RX Ethernet Driver Interface." detailDescription="TCP/IP protocol stack [M3S-T4-Tiny] - RX Ethernet Driver Interface" display="r_t4_driver_rx" id="r_t4_driver_rx1.09" version="1.09"/>
-            <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
-            <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
-        </configuration>
-        <configuration inuse="true" name="r_t4_rx">
-            <component description="依存モジュール: r_t4_driver_rx バージョン 1.09&#10;T4 is TCP/IP protocol stack that has small footprint for Renesas MCUs." detailDescription="TCP/IP protocol stack [M3S-T4-Tiny] for Renesas MCUs" display="r_t4_rx" id="r_t4_rx2.10" version="2.10">
-                <gridItem id="T4_CFG_SYSTEM_CHANNEL_NUMBER" selectedIndex="0"/>
-                <gridItem id="T4_CFG_SYSTEM_DHCP" selectedIndex="1"/>
-                <gridItem id="T4_CFG_FIXED_IP_ADDRESS_CH0" selectedIndex="192,168,0,3"/>
-                <gridItem id="T4_CFG_FIXED_SABNET_MASK_CH0" selectedIndex="255,255,255,0"/>
-                <gridItem id="T4_CFG_FIXED_GATEWAY_ADDRESS_CH0" selectedIndex="0,0,0,0"/>
-                <gridItem id="T4_CFG_FIXED_IP_ADDRESS_CH1" selectedIndex="192,168,0,10"/>
-                <gridItem id="T4_CFG_FIXED_SABNET_MASK_CH1" selectedIndex="255,255,255,0"/>
-                <gridItem id="T4_CFG_FIXED_GATEWAY_ADDRESS_CH1" selectedIndex="0,0,0,0"/>
-                <gridItem id="T4_CFG_ETHER_CH0_MAC_ADDRESS" selectedIndex="0x74,0x90,0x50,0x10,0xFE,0x77"/>
-                <gridItem id="T4_CFG_ETHER_CH1_MAC_ADDRESS" selectedIndex="0x74,0x90,0x50,0x00,0x79,0x79"/>
-                <gridItem id="T4_CFG_SYSTEM_CALLBACK_FUNCTION_USE" selectedIndex="1"/>
-                <gridItem id="T4_CFG_SYSTEM_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="system_callback"/>
-                <gridItem id="T4_CFG_TCP_REPID1_PORT_NUMBER" selectedIndex="1024"/>
-                <gridItem id="T4_CFG_TCP_REPID2_PORT_NUMBER" selectedIndex="1025"/>
-                <gridItem id="T4_CFG_TCP_REPID3_PORT_NUMBER" selectedIndex="1026"/>
-                <gridItem id="T4_CFG_TCP_REPID4_PORT_NUMBER" selectedIndex="1027"/>
-                <gridItem id="T4_CFG_TCP_CEPID1_CHANNEL" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID1_RECEIVE_WINDOW_SIZE" selectedIndex="1460"/>
-                <gridItem id="T4_CFG_TCP_CEPID1_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID1_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID1_KEEPALIVE_ENABLE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID2_CHANNEL" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID2_RECEIVE_WINDOW_SIZE" selectedIndex="1460"/>
-                <gridItem id="T4_CFG_TCP_CEPID2_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID2_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID2_KEEPALIVE_ENABLE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID3_CHANNEL" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID3_RECEIVE_WINDOW_SIZE" selectedIndex="1460"/>
-                <gridItem id="T4_CFG_TCP_CEPID3_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID3_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID3_KEEPALIVE_ENABLE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID4_CHANNEL" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID4_RECEIVE_WINDOW_SIZE" selectedIndex="1460"/>
-                <gridItem id="T4_CFG_TCP_CEPID4_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID4_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID4_KEEPALIVE_ENABLE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID5_CHANNEL" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID5_RECEIVE_WINDOW_SIZE" selectedIndex="1460"/>
-                <gridItem id="T4_CFG_TCP_CEPID5_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID5_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID5_KEEPALIVE_ENABLE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID6_CHANNEL" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID6_RECEIVE_WINDOW_SIZE" selectedIndex="1460"/>
-                <gridItem id="T4_CFG_TCP_CEPID6_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID6_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_CEPID6_KEEPALIVE_ENABLE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_TCP_MSS" selectedIndex="1460"/>
-                <gridItem id="T4_CFG_TCP_2MSL_TIME" selectedIndex="60"/>
-                <gridItem id="T4_CFG_TCP_MAX_TIMEOUT_PERIOD" selectedIndex="600"/>
-                <gridItem id="T4_CFG_TCP_DIVIDE_SENDING_PACKET" selectedIndex="1"/>
-                <gridItem id="T4_CFG_TCP_KEEPALIVE_START" selectedIndex="7200"/>
-                <gridItem id="T4_CFG_TCP_KEEPALIVE_INTERVAL" selectedIndex="10"/>
-                <gridItem id="T4_CFG_TCP_KEEPALIVE_COUNT" selectedIndex="10"/>
-                <gridItem id="T4_CFG_UDP_CEPID1_CHANNEL" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_CEPID1_PORT_NUMBER" selectedIndex="1365"/>
-                <gridItem id="T4_CFG_UDP_CEPID1_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_CEPID1_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_CEPID2_CHANNEL" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_CEPID2_PORT_NUMBER" selectedIndex="1366"/>
-                <gridItem id="T4_CFG_UDP_CEPID2_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_CEPID2_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_CEPID3_CHANNEL" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_CEPID3_PORT_NUMBER" selectedIndex="1367"/>
-                <gridItem id="T4_CFG_UDP_CEPID3_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_CEPID3_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_CEPID4_CHANNEL" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_CEPID4_PORT_NUMBER" selectedIndex="1368"/>
-                <gridItem id="T4_CFG_UDP_CEPID4_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_CEPID4_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_CEPID5_CHANNEL" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_CEPID5_PORT_NUMBER" selectedIndex="1369"/>
-                <gridItem id="T4_CFG_UDP_CEPID5_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_CEPID5_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_CEPID6_CHANNEL" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_CEPID6_PORT_NUMBER" selectedIndex="1370"/>
-                <gridItem id="T4_CFG_UDP_CEPID6_CALLBACK_FUNCTION_USE" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_CEPID6_CALLBACK_FUNCTION_NAME_TMP" selectedIndex="0"/>
-                <gridItem id="T4_CFG_UDP_MULTICAST_TTL" selectedIndex="1"/>
-                <gridItem id="T4_CFG_UDP_BEHAVIOR_OF_RECEIVED_ZERO_CHECKSUM" selectedIndex="0"/>
-                <gridItem id="T4_CFG_IP_ARP_CACHE_TABLE_COUNT" selectedIndex="3"/>
-            </component>
-            <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
-            <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
-        </configuration>
-        <configuration inuse="true" name="r_sys_time_rx">
-            <component description="依存モジュール: r_bsp バージョン 5.20&#10;依存モジュール: r_cmt_rx バージョン 4.00&#10;Generic system timer for RX MCUs using CMT module." detailDescription="Generic system timer for RX MCUs using CMT module." display="r_sys_time_rx" id="r_sys_time_rx1.01" version="1.01"/>
-            <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
-            <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
-        </configuration>
-        <configuration inuse="true" name="r_cmt_rx">
-            <component description="依存モジュール: r_bsp バージョン 7.10&#10;This module creates a timer tick using a CMT channel based on a frequency input by the user." detailDescription="CMT driver" display="r_cmt_rx" id="r_cmt_rx5.10" version="5.10">
-                <gridItem id="CMT_RX_CFG_IPR" selectedIndex="5"/>
             </component>
             <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
             <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>

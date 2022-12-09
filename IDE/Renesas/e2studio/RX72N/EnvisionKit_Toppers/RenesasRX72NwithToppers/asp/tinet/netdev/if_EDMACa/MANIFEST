@@ -1,0 +1,13 @@
+PACKAGE asp_tinet_netdev_if_EDMACa
+
+MANIFEST
+Makefile.tinet
+ether_phy.c
+ether_phy.h
+if_EDMACa.c
+if_EDMACa.h
+if_EDMACareg.h
+nic_asp.cfg
+nic_rename.h
+tinet_nic_config.h
+tinet_nic_defs.h

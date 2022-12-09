@@ -1,0 +1,6 @@
+#
+#		Driver Makefile (tinet_ftpd)
+#
+
+SYSSVC_DIR := $(SYSSVC_DIR) $(MIDDLEWAREDIR)/tinet_ftpd
+SYSSVC_COBJS := $(SYSSVC_COBJS) ftpd.o  ftpd_arg_dec.o ftpd_config.o ftpd_data_ch.o  vfs.o ftpd_messeage.o

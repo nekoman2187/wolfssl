@@ -1,0 +1,12 @@
+
+USE_RSPI_0 := true
+USE_MMC_RSPI_0 := true
+USE_MMC_GPIO_0 := true
+USE_DTCA_0 := true
+USE_SCIG_0 := true
+USE_EPTPC_0 := true
+
+INS_MID_FATFS := true
+INS_MID_FTPD := true
+INS_MID_SHELL := true
+INS_MID_BOOTLD := true
