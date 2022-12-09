@@ -1,3 +1,5 @@
+#ifndef WOLFDEMO_H_
+#define WOLFDEMO_H_
 
 
 typedef struct func_args
@@ -16,3 +18,4 @@ void benchmark_test(void *args);
 void wolfcrypt_test(void *args);
 void wolfSSL_TLS_client(void *ctx, func_args *args);
 void wolfSSL_TLS_server(void *ctx, func_args *args);
+#endif /* WOLFDEMO_H_ */

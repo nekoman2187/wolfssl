@@ -152,8 +152,8 @@ void wolfSSL_TLS_client(void *v_ctx, func_args *args)
     }
 #endif
 
-    dst_addr.ipaddr =   (192 << 24) | (168 << 16) | (11 << 8) | 4;
-    dst_addr.portno = 1024;
+    dst_addr.ipaddr = getIPaddr(SERVER_IP);
+    dst_addr.portno = SERVER_PortNo;
     if((ercd = tcp_con_cep(cepid, &my_addr, &dst_addr, TMO_FEVR)) != E_OK) {
         printf("ERROR TCP Connect: %d\n", ercd);
         return;
