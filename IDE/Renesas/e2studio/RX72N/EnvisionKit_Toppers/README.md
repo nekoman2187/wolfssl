@@ -12,7 +12,7 @@
  # 1.ライブラリー作成
   本デモに必要なToppersライブラリー、wolfSSLライブラリーを作成します  
  1-1.メニューの[ファイル]→[インポート(I)...]→[既存プロジェクトをワークスペースへ]→[次へ]を選択  
- 1-2.[プロジェクトをインポート]ダイアログの[ルートディレクトリーの選択(T)]の[参照(R)]を押下
+ 1-2.[プロジェクトをインポート]ダイアログの[ルートディレクトリーの選択(T)]の[参照(R)]を押下  
  1-3.git レポジトリwolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppersの[wolflib]を選択[フォルダーの選択]を押下      
  1-4.ダイアログボックス右上[+]を押下しディレクトリを選択[wolflib]と同じ階層にある[WolfDemo]をワークスペース又はファイルシステムより設定  
  1-5.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルドを行う  
@@ -141,32 +141,3 @@ smc_gen\r_t4_driver_rx\src\t4_driver.c
  4-3.[WolfSSLDemo.c]のdefine値[#define SSL_SERVER]を定義を行うとサーバとしての動作になり、削除でクライアントとしての動作となる(通信相手はwolfsslサンプルにてlinux,windows,macにて作成の事)  
  4-4.バーチャルコンソールにて実行を確認します  
 
-
-# 補足:新規にプロジェクトを作成する場合は以下を参照ください
-# 補足1.e² studioプロジェクト作成 
- 補足1-1.メニューの[ファイル]→[Renesas C/C++ Project]→[Renesas RX]を選択  
- 補足1-2.プロジェクト選択BOXの[GCC for Renesas RX Executable Projec]を選択[次へ(N)]を選択  
- 補足1-3.プロジェクト名を入力  
- 補足1-4.[toolchain Seetings]で[C](デフォルト),ツールチェーン：[GCC for Renesas RX ](デフォルト)  
-     ツールチェーン・バージョン：[8.3.0.202202]を選択   
- 補足1-5.[Device Seetings]でTarget Board:[RX72NEnvisionKit]をプルダウンメニューから選択  
- 補足1-6.[次へ(N)]を選択後次画面で[終了]を選択(use Smart Configuratorはチェック)  
-
- # 補足2.e² studioプロジェクト設定  
- 補足2-1.プロジェクト名.scfgをダブルクリック  
- 補足2-2.「概説」が表示されている領域の[コンポーネント]を選択  
- 補足2-3.コンポーネントの[+]マークの[コンポーネントの追加]選択  
- 補足2-4.[機能]プルダウンメニューから[通信]を選択  
- 補足2-5.[Ethernet Driver][TCP/IP protocol stack]の[r_t4_driver_rx][r_t4_rx]の三つを選択後[終了]を選択  
- 補足2-6.[r_bsp]をクリックし[プロパティ]ダイアログの 以下を変更します
-```  
-  User stack setting   2stacks
-  User stack size      0x400
-  Interrupt stack size 0x8000
-  Heap size            0xA000 　　 
- ```
- 補足2-7.[r_ether_rx]をクリックし[プロパティ]ダイアログの 以下を変更します
-```  
-  PHY-LSI address setting for ETHER0　　　　　　　1
-  The register bus of PHY0 for  ETHER0/ETHER1    Use ETHER0　 
- ```
