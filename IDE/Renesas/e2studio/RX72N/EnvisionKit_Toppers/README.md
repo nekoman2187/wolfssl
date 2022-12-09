@@ -15,8 +15,8 @@
  1-2.git レポジトリwolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppersの[wolflib]を選択[フォルダーの選択]を押下      
  1-3.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルドを行う  
  1-4. [wolflib/Debug]に[libwolflib.a]が生成されます  
- 1-5.Toppersライブラリーのビルドの為、[https://github.com/nekoman2187/RenesasRX72NwithToppers]よりgit clone又はダウンロードし解凍します 
- 1-7.事前準備確認
+ 1-5.Toppersライブラリーのビルドの為、[https://github.com/nekoman2187/RenesasRX72NwithToppers]よりgit clone又はダウンロードし解凍します  
+ 1-6.事前準備確認
    コマンド実行ではMsys2等の環境を事前にご用意ください  
    Msys2でgccのツールチェーンのインストールを行ってください  
    Msys2環境では事前にRenesas環境のパス設定を行う必要があります.bashrc等      
@@ -24,7 +24,7 @@
  ```  
 export PATH=PATH=$PATH:\/C/ProgramData\/GCC\ for\ Renesas\ RX\ 8.3.0.202202-GNURX-ELF/rx-elf/rx-elf/bin
  ``` 
-　1-8.設定を確認後、以下を行います
+　1-7.設定を確認後、以下を行います
 
   ```  
 $ pwd
@@ -49,7 +49,7 @@ smc_gen\r_t4_driver_rx\src\t4_driver.c
 //#include "r_tsip_rx_if.h"  
 ```
  # 3.e² studio BSP修正
- 3-1.生成されたBSPをToppersに適用する為、BSPに以下の変更及び修正を加えます  
+ 3-1.生成されたBSPをToppersに適用する為、以下の変更及び修正を加えます  
  ```  
 smc_gen\general\r_cg_hardware_setup.c  
 void R_Systeminit(void)  
