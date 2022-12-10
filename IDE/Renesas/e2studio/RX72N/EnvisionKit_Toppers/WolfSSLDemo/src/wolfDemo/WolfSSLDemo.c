@@ -39,7 +39,7 @@ void main(void)
 
 void timer_int_Wrapper() {
 #ifndef ETHER_TASK
-	//cmt1_isr();
+	cmt1_isr();
 #endif
  }
 
@@ -224,3 +224,6 @@ ER system_callback(UB channel, UW eventid, VP param)
     return 0;
 
 }
+
+
+
