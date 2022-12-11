@@ -128,6 +128,8 @@ smc_gen\r_config\r_cmt_rx_config.h  (初回ビルド後に生成)
  ※コンフィグレーション直後/ビルドクリーン後に[T4_Library_ether_ccrx_rxv1_little]がリンカーでエラーになる場合が
  あります　プロジェクトの[プロパティ]ダイアログ[C/C++ビルド]の[設定]で[Linker]/[Archives]  
  [User defined archive (library) files (-I)]から[×]押下から[T4_Library_ether_ccrx_rxv1_little]を削除してください  
- 4-3.[WolfSSLDemo.c]のdefine値[#define SSL_SERVER]を定義を行うとサーバとしての動作になり、削除でクライアントとしての動作となります(通信相手はwolfsslサンプルにてlinux,windows,macにて作成の事)  
- 4-4.[Renesas Debug Virtual Console]にて実行を確認します  
-
+ 4-3.[WolfSSLDemo.c]のdefine値[#define SSL_SERVER]を定義を行うとサーバとしての動作になり、削除でクライアントとしての動作となります(通信相手はwolfsslサンプルにてlinux,windows,macにて作成の事)    
+ ※クライアントとしての動作の場合[src/wolfDemo/wolf_demo.h]の  
+ サーバIPアドレスのdefine値 [SERVER_IP]を"xxx.xx.xx.xx"       
+ ポート番号のdefine値 [SERVER_PortNo]をポート番号として設定して下さい    
+ 4-4.[Renesas Debug Virtual Console]にて実行を確認します   
