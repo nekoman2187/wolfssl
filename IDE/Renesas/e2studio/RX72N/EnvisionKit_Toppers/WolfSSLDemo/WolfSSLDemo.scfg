@@ -443,7 +443,7 @@
         <Item currentVect="110" groupchild="&lt;br&gt;1-TEI0&lt;br&gt;2-ERI0&lt;br&gt;3-TEI1&lt;br&gt;4-ERI1&lt;br&gt;5-TEI2&lt;br&gt;6-ERI2&lt;br&gt;7-TEI3&lt;br&gt;8-ERI3&lt;br&gt;9-TEI4&lt;br&gt;10-ERI4&lt;br&gt;11-TEI5&lt;br&gt;12-ERI5&lt;br&gt;13-TEI6&lt;br&gt;14-ERI6&lt;br&gt;15-TEI12&lt;br&gt;16-ERI12&lt;br&gt;17-SCIX0&lt;br&gt;18-SCIX1&lt;br&gt;19-SCIX2&lt;br&gt;20-SCIX3&lt;br&gt;21-QSPSSLI&lt;br&gt;22-FERRI&lt;br&gt;23-MENDI&lt;br&gt;24-OVFI&lt;br&gt;25-DOPCI&lt;br&gt;26-PCFEI&lt;br&gt;27-PCERI" id="BL0" priority="15" usedState="未使用"/>
         <Item currentVect="111" groupchild="&lt;br&gt;1-CDETI&lt;br&gt;2-CACI&lt;br&gt;3-SDACI&lt;br&gt;4-CDETIO&lt;br&gt;5-ERRIO&lt;br&gt;6-ACCIO&lt;br&gt;7-OEI1&lt;br&gt;8-OEI2&lt;br&gt;9-OEI3&lt;br&gt;10-OEI4&lt;br&gt;11-TEI0&lt;br&gt;12-EEI0&lt;br&gt;13-TEI2&lt;br&gt;14-EEI2&lt;br&gt;15-SSIF0&lt;br&gt;16-SSIF1&lt;br&gt;17-S12CMPAI&lt;br&gt;18-S12CMPBI&lt;br&gt;19-S12CMPAI1&lt;br&gt;20-S12CMPBI1&lt;br&gt;21-TEI1&lt;br&gt;22-EEI1" id="BL1" priority="15" usedState="未使用"/>
         <Item currentVect="112" groupchild="&lt;br&gt;1-TEI8&lt;br&gt;2-ERI8&lt;br&gt;3-TEI9&lt;br&gt;4-ERI9&lt;br&gt;5-TEI10&lt;br&gt;6-ERI10&lt;br&gt;7-TEI11&lt;br&gt;8-ERI11&lt;br&gt;9-SPII0&lt;br&gt;10-SPEI0&lt;br&gt;11-SPII1&lt;br&gt;12-SPEI1&lt;br&gt;13-SPII2&lt;br&gt;14-SPEI2&lt;br&gt;15-TEI7&lt;br&gt;16-ERI7" id="AL0" priority="15" usedState="未使用"/>
-        <Item currentVect="113" groupchild="&lt;br&gt;1-MINT&lt;br&gt;2-PINT&lt;br&gt;3-EINT0&lt;br&gt;4-EINT1&lt;br&gt;5-VPOS&lt;br&gt;6-GR1UF&lt;br&gt;7-GR2UF&lt;br&gt;8-DRW_IRQ" id="AL1" priority="2" usedState="未使用"/>
+        <Item currentVect="113" groupchild="&lt;br&gt;1-MINT&lt;br&gt;2-PINT&lt;br&gt;3-EINT0&lt;br&gt;4-EINT1&lt;br&gt;5-VPOS&lt;br&gt;6-GR1UF&lt;br&gt;7-GR2UF&lt;br&gt;8-DRW_IRQ" id="AL1" priority="2" usedState="使用中"/>
         <Item currentVect="114" id="SCI11_RXI11" priority="15" usedState="未使用"/>
         <Item currentVect="115" id="SCI11_TXI11" priority="15" usedState="未使用"/>
         <Item currentVect="116" id="SCI12_RXI12" priority="15" usedState="未使用"/>
@@ -580,39 +580,35 @@
         <Item currentVect="249" defaultVect="249" id="MTU8_TGID8" priority="15" usedState="未使用"/>
         <Item currentVect="250" defaultVect="250" id="MTU8_TCIV8" priority="15" usedState="未使用"/>
         <Item currentVect="251" defaultVect="251" id="EPTPC_IPLS" priority="15" usedState="未使用"/>
-        <Item currentVect="252" defaultVect="252" id="PMGI0_PMGI0I" priority="2" usedState="未使用"/>
-        <Item currentVect="253" defaultVect="253" id="PMGI1_PMGI1I" priority="2" usedState="未使用"/>
+        <Item currentVect="252" defaultVect="252" id="PMGI0_PMGI0I" priority="2" usedState="使用中"/>
+        <Item currentVect="253" defaultVect="253" id="PMGI1_PMGI1I" priority="2" usedState="使用中"/>
         <Item currentVect="254" id="PERIA_INTA254" priority="15" usedState="未使用"/>
         <Item currentVect="255" id="PERIA_INTA255" priority="15" usedState="未使用"/>
     </tool>
     <tool id="Pins" version="1.0.1.0">
         <pinItem allocation="10" comments="" direction="None" id="EMLE" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="20" comments="" direction="None" id="XTAL" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="50" comments="" direction="None" id="CLKOUT25M" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="28" comments="" direction="None" id="TMS" isUsedBySoftware="true" locked="false" operationMode="" status="65280"/>
-        <pinItem allocation="65" comments="" direction="None" id="ET0_TX_EN" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="67" comments="" direction="None" id="ET0_TX_ER" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="85" comments="" direction="None" id="ET0_MDC" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="60" comments="" direction="None" id="ET0_COL" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="58" comments="" direction="None" id="ET0_CRS" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
+        <pinItem allocation="50" comments="" direction="None" id="CLKOUT25M" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="65" comments="" direction="None" id="ET0_TX_EN" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="67" comments="" direction="None" id="ET0_TX_ER" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="85" comments="" direction="None" id="ET0_MDC" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="60" comments="" direction="None" id="ET0_COL" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="58" comments="" direction="None" id="ET0_CRS" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="22" comments="" direction="None" id="EXTAL" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="25" comments="" direction="None" id="TRST#" isUsedBySoftware="true" locked="false" operationMode="" status="65280"/>
-        <pinItem allocation="70" comments="" direction="None" id="ET0_RX_DV" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="68" comments="" direction="None" id="ET0_RX_ER" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="61" comments="" direction="None" id="ET0_ETXD3" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="62" comments="" direction="None" id="ET0_ETXD2" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="63" comments="" direction="None" id="ET0_ETXD1" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="64" comments="" direction="None" id="ET0_ETXD0" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="69" comments="" direction="None" id="ET0_RX_CLK" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="75" comments="" direction="None" id="ET0_ERXD3" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="73" comments="" direction="None" id="ET0_ERXD2" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="72" comments="" direction="None" id="ET0_ERXD1" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="71" comments="" direction="None" id="ET0_ERXD0" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="66" comments="" direction="None" id="ET0_TX_CLK" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="86" comments="" direction="None" id="ET0_MDIO" isUsedBySoftware="true" locked="false" operationMode="" status="4"/>
-        <pinItem allocation="30" comments="" direction="None" id="TCK" isUsedBySoftware="true" locked="false" operationMode="" status="65280"/>
-        <pinItem allocation="29" comments="" direction="None" id="TDI" isUsedBySoftware="true" locked="false" operationMode="" status="65280"/>
-        <pinItem allocation="31" comments="" direction="None" id="TDO" isUsedBySoftware="true" locked="false" operationMode="" status="65280"/>
+        <pinItem allocation="16" comments="" direction="None" id="FINED" isUsedBySoftware="true" locked="false" operationMode="" status="65280"/>
+        <pinItem allocation="70" comments="" direction="None" id="ET0_RX_DV" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="68" comments="" direction="None" id="ET0_RX_ER" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="61" comments="" direction="None" id="ET0_ETXD3" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="62" comments="" direction="None" id="ET0_ETXD2" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="63" comments="" direction="None" id="ET0_ETXD1" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="64" comments="" direction="None" id="ET0_ETXD0" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="69" comments="" direction="None" id="ET0_RX_CLK" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="75" comments="" direction="None" id="ET0_ERXD3" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="73" comments="" direction="None" id="ET0_ERXD2" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="72" comments="" direction="None" id="ET0_ERXD1" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="71" comments="" direction="None" id="ET0_ERXD0" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="66" comments="" direction="None" id="ET0_TX_CLK" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="86" comments="" direction="None" id="ET0_MDIO" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinnumItem comment="LCD-B4" id="88"/>
         <pinnumItem comment="LCD-B5" id="89"/>
         <pinnumItem comment="LCD-R7" id="110"/>
@@ -726,9 +722,9 @@
         <configuration inuse="true" name="r_bsp">
             <component description="依存モジュール: なし&#10;The r_bsp package provides a foundation for code to be built on top of. It provides startup code, iodefines, and MCU information for different boards. There are 2 folders that make up the r_bsp package. The 'mcu' folder contains files that are common to a MCU group. These files provide functionality such as easy register access, CPU functions, and a file named 'mcu_info.h' for each MCU group. The 'mcu_info.h' file has information about the MCU on the board and is configured based on the information given in r_bsp_config.h. The information in 'mcu_info.h' is used to help configure Renesas middleware that uses the r_bsp package. The 'board' folder has a folder with startup code for each supported board.  Which MCU and board is chosen is decided by the settings in 'platform.h'. The user can choose which board they are using by uncommenting the include path that applies to their board. For example, if you are using the RSK+RX64M then you would uncomment the #include &quot;./board/generic_rx64m/r_bsp.h&quot; include path. Users are encouraged to add their own boards to the 'board' directory. BSPs are configured by using the r_bsp_config.h file. Each board will have a reference configuration file named r_bsp_config_reference.h. The user should copy this file to their project, rename it to r_bsp_config.h, and use the options inside the file to configure the BSP for their project." detailDescription="Board Support Packages." display="r_bsp" id="r_bsp7.10" version="7.10">
                 <gridItem id="BSP_CFG_USER_STACK_ENABLE" selectedIndex="1"/>
-                <gridItem id="BSP_CFG_USTACK_BYTES" selectedIndex="0x1000"/>
-                <gridItem id="BSP_CFG_ISTACK_BYTES" selectedIndex="0x400"/>
-                <gridItem id="BSP_CFG_HEAP_BYTES" selectedIndex="0x400"/>
+                <gridItem id="BSP_CFG_USTACK_BYTES" selectedIndex="0x400"/>
+                <gridItem id="BSP_CFG_ISTACK_BYTES" selectedIndex="0x8000"/>
+                <gridItem id="BSP_CFG_HEAP_BYTES" selectedIndex="0xA000"/>
                 <gridItem id="BSP_CFG_IO_LIB_ENABLE" selectedIndex="0"/>
                 <gridItem id="BSP_CFG_USER_CHARGET_ENABLED" selectedIndex="0"/>
                 <gridItem id="BSP_CFG_USER_CHARGET_FUNCTION" selectedIndex="my_sw_charget_function"/>
@@ -977,18 +973,18 @@
                 <gridItem id="ET1_WOL" selectedIndex="0"/>
                 <gridItem id="ETHERC1_RMII" selectedIndex="1"/>
                 <gridItem id="ETHER_CFG_MODE_SEL" selectedIndex="0"/>
-                <gridItem id="ETHER_CFG_CH0_PHY_ADDRESS" selectedIndex="0"/>
+                <gridItem id="ETHER_CFG_CH0_PHY_ADDRESS" selectedIndex="1"/>
                 <gridItem id="ETHER_CFG_CH1_PHY_ADDRESS" selectedIndex="1"/>
                 <gridItem id="ETHER_CFG_EMAC_RX_DESCRIPTORS" selectedIndex="1"/>
                 <gridItem id="ETHER_CFG_EMAC_TX_DESCRIPTORS" selectedIndex="1"/>
                 <gridItem id="ETHER_CFG_BUFSIZE" selectedIndex="1536"/>
                 <gridItem id="ETHER_CFG_AL1_INT_PRIORTY" selectedIndex="1"/>
-                <gridItem id="ETHER_CFG_CH0_PHY_ACCESS" selectedIndex="1"/>
+                <gridItem id="ETHER_CFG_CH0_PHY_ACCESS" selectedIndex="0"/>
                 <gridItem id="ETHER_CFG_CH1_PHY_ACCESS" selectedIndex="1"/>
                 <gridItem id="ETHER_CFG_PHY_MII_WAIT" selectedIndex="8"/>
                 <gridItem id="ETHER_CFG_PHY_DELAY_RESET" selectedIndex="0x00020000L"/>
                 <gridItem id="ETHER_CFG_LINK_PRESENT" selectedIndex="0"/>
-                <gridItem id="ETHER_CFG_USE_LINKSTA" selectedIndex="1"/>
+                <gridItem id="ETHER_CFG_USE_LINKSTA" selectedIndex="0"/>
                 <gridItem id="ETHER_CFG_USE_PHY_KSZ8041NL" selectedIndex="0"/>
                 <gridItem id="ETHER_CFG_USE_PHY_ICS1894_32" selectedIndex="0"/>
                 <gridItem id="ETHER_CFG_NON_BLOCKING" selectedIndex="0"/>
@@ -1004,7 +1000,7 @@
     </tool>
     <tool id="System">
         <section id="ocd">
-            <option enabled="true" id="debugIF" selection="jtag">
+            <option enabled="true" id="debugIF" selection="fine">
                 <item enabled="true" id="unused"/>
                 <item enabled="true" id="fine"/>
                 <item enabled="true" id="jtag"/>
