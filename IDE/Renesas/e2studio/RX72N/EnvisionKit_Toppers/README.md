@@ -45,8 +45,12 @@ $ make depend
  3-1.生成されたBSPをToppersに適用する為、以下の変更及び修正を加えます  
  ```  
 smc_gen/r_t4_driver_rx/src/t4_driver.c  
+#elif (defined BSP_MCU_RX72M || defined BSP_MCU_RX72N || defined BSP_MCU_RX66N) && \
+    (BSP_CFG_MCU_PART_FUNCTION == 0x11 /* H */)
 #include "r_tsip_rx_if.h"  
   ↓  修正  
+#elif (defined BSP_MCU_RX72M || defined BSP_MCU_RX72N || defined BSP_MCU_RX66N) && \
+    (BSP_CFG_MCU_PART_FUNCTION == 0x11 /* H */)
 //#include "r_tsip_rx_if.h"
 
 smc_gen\general\r_cg_hardware_setup.c  
