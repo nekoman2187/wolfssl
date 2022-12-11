@@ -113,7 +113,7 @@ R_BSP_SET_INTB(R_BSP_SECTOP_INTVECTTBL);
  	↓  修正  
    //bsp_interrupt_open();  
 
-smc_gen\r_config\r_cmt_rx_config.h  (初回ビルド後に出力)
+smc_gen\r_config\r_cmt_rx_config.h  (初回ビルド後に生成)
 #if (BSP_CFG_RTOS_USED == 4) && (BSP_CFG_RENESAS_RTOS_USED == 0) /* RI600V4 */
 #define _RI_TRACE_TIMER 1 /* RI600V4 uses CMT1 channel for the trace feature.*/
   ↓  修正  
