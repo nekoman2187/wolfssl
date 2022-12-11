@@ -25,7 +25,7 @@
 #include "platform.h"
 #include "WolfSSLDemo.h"
 #define SSL_SERVER
-//#define ETHER_TASK
+#define ETHER_TASK
 
 static int dhcp_accept_flg = 0;
 static UW tcpudp_work[14800] = {0};
