@@ -109,12 +109,6 @@ R_BSP_SET_INTB(R_BSP_SECTOP_INTVECTTBL);
     /* Call the main program function (should not return) */
     R_BSP_MAIN_FUNCTION();    
 
-#elif BSP_CFG_RTOS_USED == 4    /* Renesas RI600V4 & RI600PX */
-#if BSP_CFG_RENESAS_RTOS_USED == RENESAS_RI600V4
- 	↓  修正
-#elif BSP_CFG_RTOS_USED == 6    /* Renesas RI600V4 & RI600PX */
-#if BSP_CFG_RENESAS_RTOS_USED == RENESAS_RI600V4
-
    bsp_interrupt_open();  
  	↓  修正  
    //bsp_interrupt_open();  
