@@ -3,7 +3,7 @@ ctaocrypt/src/src/
 *.lo
 *.la
 *.o
-*.patch
+#*.patch
 *.deps
 *.d
 *.libs
