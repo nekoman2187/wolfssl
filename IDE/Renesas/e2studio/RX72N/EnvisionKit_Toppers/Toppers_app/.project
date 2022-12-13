@@ -24,4 +24,11 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>toppers_rx/1.9.1</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/1.9.1</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

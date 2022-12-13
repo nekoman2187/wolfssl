@@ -16,8 +16,17 @@
  1-3.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルドを行う  
  (上記操作操作を行う場合[プロジェクト][プロパティ]の[設定][toolchain]タブで[ツールチェーン:]が選択されている事を確認ください)  
  1-4. [wolflib/Debug]に[libwolflib.a]が生成されます  
- 1-5.Toppersライブラリーのビルドの為、[https://github.com/nekoman2187/RenesasRX72NwithToppers]　よりgit clone又はダウンロードし解凍します(フォルダー名は[RenesasRX72NwithToppers]として下さい)  
- 1-6.事前準備確認  
+ 1-5.Toppersライブラリーのビルドの為、[https://www.toppers.jp/asp-d-download.html]　より[asp-1.9.1.tar.gz]をダウンロードし[/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/]に解凍します 
+ 1-6.Toppersライブラリーのビルドの為、[https://www.toppers.jp/cfg-download.html]　より[コンフィギュレータ Release 1.9.6（Windows用バイナリ）]をダウンロードし[1.5]で解凍した[1.9.1/asp]ディレクトリに[cfg/cdg]ディレクトリを作成し[cfg.exe]として解凍します 
+
+ 1-7.Toppers ASPにPtachを適用する  
+ (Msys2でpatchコマンドが使えない場合は[pacman -S patch] でインストールが必要となります)     
+ ``` 
+ $ pwd
+[個別インストール環境]/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/1.9.1
+ patch --binary -p1 < ../toppers.patch
+```  
+ 1-8.事前準備確認  
    コマンド実行ではMsys2等の環境を事前にご用意ください  
    Msys2でgccのツールチェーンのインストールを行ってください  
    Msys2環境では事前にRenesas環境のパス設定を行う必要があります.bashrc等      
@@ -25,16 +34,15 @@
  ```  
 export PATH=PATH=$PATH:\/C/ProgramData\/GCC\ for\ Renesas\ RX\ 8.3.0.202202-GNURX-ELF/rx-elf/rx-elf/bin
  ``` 
-　1-7.設定を確認後、以下を行います
-
+　1-9.設定を確認後、以下を行います
   ```  
 $ pwd
-[個別インストール環境]/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/RenesasRX72NwithToppers
+[個別インストール環境]/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/1.9.1
 $ perl ./asp/configure -T rx72n_gcc
 $ make depend
 ```  
- 1-9.[1-7.]終了後、前述[1-1./1-2.]同様、[Toppers_app]を選択[フォルダーの選択]を押下  
- 1-10.[1-3.]同様ビルドを行うと「toppers_rx]に[libasp.a]が生成されます    
+ 1-10.[1-7.]終了後、前述[1-1./1-2.]同様、[Toppers_app]を選択[フォルダーの選択]を押下  
+ 1-11.[1-3.]同様ビルドを行うと「toppers_rx]に[libasp.a]が生成されます    
  
 # 2.wolfSSLDemoプロジェクトの修正 
  2-1.メニューの[ファイル・システムからプロジェクトを開く...]を選択  
@@ -48,12 +56,11 @@ $ make depend
 
  # 3.e² studio BSPにPtachを適用する  
  3-1.生成されたBSPをToppersに適用する為、Patch コマンドにて修正をします  
- (Msys2でpatchコマンドが使えない場合は[pacman -S patch] でインストールが必要となります)   
  以下を行います
  ```  
 $ pwd
 [個別インストール環境]/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/WolfSSLDemo
- patch --binary -p0 < ./bsp_patch
+ patch --binary -p0 < ./bsp.patch
 ```
 
 # 4.wolfSSLDemoプロジェクトのビルド  
