@@ -13,12 +13,12 @@
   本デモに必要なToppersライブラリー、wolfSSLライブラリーを作成します  
  1-1.[プロジェクトをインポート]ダイアログの[ルートディレクトリーの選択(T)]の[参照(R)]を押下  
  1-2.git レポジトリwolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppersの[wolflib]を選択[フォルダーの選択]を押下      
- 1-3.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルドを行う  
+ 1-3.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルド
  (上記操作操作を行う場合[プロジェクト][プロパティ]の[設定][toolchain]タブで[ツールチェーン:]が選択されている事を確認ください)  
  1-4. [wolflib/Debug]に[libwolflib.a]が生成されます  
  1-5.Toppersライブラリーのビルドの為、[https://www.toppers.jp/asp-d-download.html]より[asp-1.9.1.tar.gz]をダウンロードし[/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/]に解凍します   
  1-6.Toppersライブラリーのビルドの為、[https://www.toppers.jp/cfg-download.html]　より[コンフィギュレータ Release 1.9.6（Windows用バイナリ）]をダウンロードし[1.5]で解凍した[1.9.1/asp]ディレクトリに[cfg/cdg]ディレクトリを作成し中に[cfg.exe]として解凍します  
- 1-7.Toppers ASPに以下に示すPtachを適用します       　 
+ 1-7.Toppers ASPに以下に示すPtachを適用します         　 
  (Msys2でpatchコマンドが使えない場合は[pacman -S patch] でインストールが必要となります)     
  ``` 
  $ pwd
@@ -40,8 +40,8 @@ $ pwd
 $ perl ./asp/configure -T rx72n_gcc
 $ make depend
 ```  
- 1-10.[1-7.]終了後、前述[1-1./1-2.]同様、[Toppers_app]を選択[フォルダーの選択]を押下  
- 1-11.[1-3.]同様ビルドを行うと「toppers_rx]に[libasp.a]が生成されます    
+ 1-10.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルド    
+ 1-11.toppers_rx]に[libasp.a]が生成されます    
  
 # 2.wolfSSLDemoプロジェクトの修正 
  2-1.メニューの[ファイル・システムからプロジェクトを開く...]を選択  
