@@ -19,11 +19,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1335, USA
  */
 #include <string.h>
+#include <wolf_main.h>
+
 #include "r_sys_time_rx_if.h"
 #include "r_cmt_rx_if.h"
 #include "Pin.h"
 #include "r_t4_itcpip.h"
-#include "WolfSSLDemo.h"
 #define SSL_SERVER
 #define ETHER_TASK
 extern const UB _t4_dhcp_enable;

@@ -16,10 +16,9 @@
  1-3.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルドを行う  
  (上記操作操作を行う場合[プロジェクト][プロパティ]の[設定][toolchain]タブで[ツールチェーン:]が選択されている事を確認ください)  
  1-4. [wolflib/Debug]に[libwolflib.a]が生成されます  
- 1-5.Toppersライブラリーのビルドの為、[https://www.toppers.jp/asp-d-download.html]　より[asp-1.9.1.tar.gz]をダウンロードし[/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/]に解凍します 
- 1-6.Toppersライブラリーのビルドの為、[https://www.toppers.jp/cfg-download.html]　より[コンフィギュレータ Release 1.9.6（Windows用バイナリ）]をダウンロードし[1.5]で解凍した[1.9.1/asp]ディレクトリに[cfg/cdg]ディレクトリを作成し[cfg.exe]として解凍します 
-
- 1-7.Toppers ASPにPtachを適用する  
+ 1-5.Toppersライブラリーのビルドの為、[https://www.toppers.jp/asp-d-download.html]より[asp-1.9.1.tar.gz]をダウンロードし[/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/]に解凍します   
+ 1-6.Toppersライブラリーのビルドの為、[https://www.toppers.jp/cfg-download.html]　より[コンフィギュレータ Release 1.9.6（Windows用バイナリ）]をダウンロードし[1.5]で解凍した[1.9.1/asp]ディレクトリに[cfg/cdg]ディレクトリを作成し中に[cfg.exe]として解凍します  
+ 1-7.Toppers ASPに以下に示すPtachを適用します     　 
  (Msys2でpatchコマンドが使えない場合は[pacman -S patch] でインストールが必要となります)     
  ``` 
  $ pwd
@@ -67,8 +66,7 @@ $ pwd
  4-1.[3-1.]終了後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルド   
  4-2.ビルドで生成されたELFファイルを[メニュー]→[実行(R)]→[実行(R)]又は[デバッグ(D)]でボードへ転送を行い、実行します  
  ※コンフィグレーション直後/ビルドクリーン後に[T4_Library_ether_ccrx_rxv1_little]がリンカーでエラーになる場合が
- あります　プロジェクトの[プロパティ]ダイアログ[C/C++ビルド]の[設定]で[Linker]/[Archives]  
- [User defined archive (library) files (-I)]から[×]押下から[T4_Library_ether_ccrx_rxv1_little]を削除してください  
+ ありますがプロジェクトの[プロパティ]ダイアログ[C/C++ビルド]の[設定]で[Linker]/[Archives]/[User defined archive (library) files (-I)]/[×]押下から[T4_Library_ether_ccrx_rxv1_little]を削除してください  
  4-3.[WolfSSLDemo.c]のdefine値[#define SSL_SERVER]を定義を行うとサーバとしての動作になり、削除でクライアントとしての動作となります(通信相手はwolfsslサンプルにてlinux,windows,macにて作成の事)    
  ※クライアントとしての動作の場合[src/wolfDemo/wolf_demo.h]の  
  サーバIPアドレスのdefine値 [SERVER_IP]を"xxx.xx.xx.xx"       
