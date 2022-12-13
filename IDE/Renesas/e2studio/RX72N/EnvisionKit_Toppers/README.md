@@ -4,17 +4,17 @@
 
 # 本デモについては以下が必要です 
 
-1.Renesas e² studio Version: 2022-07 (22.7.0)以降   
-2.Toppers OS 1.91.1 Renesas RX72N適用バージョン(gitレポジトリーより入手)    
-3.WolfSSL Release 5.X.0 以降 (gitレポジトリーより入手)  
+1.Renesas e² studio Version: 2022-07 (22.7.0)以降
+2.Renesas e² studio BSP   
+3.Toppers OS 1.91.1 (Patch RX720N適用版)    
 <br>
 |要素|名称/バージョン|
 |:--|:--|
 |Renesas e² studio Version|GR-2022-07 (22.7.0)以降|
 |Toppers OS|1.9.1|
 |Toppers コンフィギュレータ|1.9.6|
-|Renesas r_bsp|7.10|
-|Renesas r_cmt_rx|5.10|
+|Renesas BSP r_bsp|7.10|
+|Renesas BSP r_cmt_rx|5.10|
 <br>
 
 # 以下に環境構築手順を示します
