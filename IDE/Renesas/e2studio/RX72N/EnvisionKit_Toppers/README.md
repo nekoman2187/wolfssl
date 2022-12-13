@@ -41,86 +41,19 @@ $ make depend
  2-2.git レポジトリwolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppersの[wolfSSLDemo]を選択[フォルダーの選択]を押下  
  2-3.[WolfSSLDemo.scfg]をダブルクリックで設定ダイアログが表示→[コンポーネントタブ] を選択  
  2-4.[ソフトウェアコンポーネントダイアログ]ダイアログ右上の[コードの生成]を押下      
- 
- # 3.e² studio BSP修正
- 3-1.生成されたBSPをToppersに適用する為、以下の変更及び修正を加えます  
+ 2-5.ダイアログ左のコンポーネント選択で[Startup] [r_bsp]を選択右クリックしコンテキストメニュー[バージョン変更]を選択し[現在のバージョン]  
+     が[7.10]である事を確認してください([7.10]でない場合[変更後のバージョン:]で[7.10]を選択し[次へ(N)>]を押下しコードを生成して下さい)   
+ 2-6.ダイアログ左のコンポーネント選択で[Drivers] [r_cmt_rx]を選択右クリックしコンテキストメニュー[バージョン変更]を選択し[現在のバージョン]     
+     が[5.10]である事を確認してください([5.10]でない場合[変更後のバージョン:]で[5.10]を選択し[次へ(N)>]を押下しコードを生成して下さい)     
+
+ # 3.e² studio BSPにPtachを適用する  
+ 3-1.生成されたBSPをToppersに適用する為、Patch コマンドにて修正をします  
+ (Msys2でpatchコマンドが使えない場合は[pacman -S patch] でインストールが必要となります)   
+ 以下を行います
  ```  
-smc_gen/r_t4_driver_rx/src/t4_driver.c  
-#elif (defined BSP_MCU_RX72M || defined BSP_MCU_RX72N || defined BSP_MCU_RX66N) && \
-    (BSP_CFG_MCU_PART_FUNCTION == 0x11 /* H */)
-#include "r_tsip_rx_if.h"  
-  ↓  修正  
-#elif (defined BSP_MCU_RX72M || defined BSP_MCU_RX72N || defined BSP_MCU_RX66N) && \
-    (BSP_CFG_MCU_PART_FUNCTION == 0x11 /* H */)
-//#include "r_tsip_rx_if.h"
-
-smc_gen\general\r_cg_hardware_setup.c  
-void R_Systeminit(void)  
-    R_Interrupt_Create();  が存在した場合
-	↓  修正  
-   // R_Interrupt_Create();  
-smc_gen/r_config/r_bsp_config.h
-#define BSP_CFG_RTOS_USED               (0)
-	↓  修正  
-#define BSP_CFG_RTOS_USED               (4)
-
-smc_gen/r_bsp/mcu/all/resetprg.c   
-#if (BSP_CFG_RTOS_USED == 0) || (BSP_CFG_RTOS_USED == 5)     /* Non-OS or Azure RTOS */
-extern void R_BSP_MAIN_FUNCTION(void);
-#endif
-↓  修正  
-#if (BSP_CFG_RTOS_USED == 0) || (BSP_CFG_RTOS_USED == 5) || (BSP_CFG_RTOS_USED == 4)    /* Non-OS or Azure RTOS */
-extern void R_BSP_MAIN_FUNCTION(void);
-#endif
-
-#if (BSP_CFG_RTOS_USED == 0) || (BSP_CFG_RTOS_USED == 5)  /* Non-OS or Azure RTOS */
-    /* Call the main program function (should not return) */
-    R_BSP_MAIN_FUNCTION();
-#elif BSP_CFG_RTOS_USED == 1    /* FreeRTOS */
-    /* Lock the channel that system timer of RTOS is using. */
-↓  修正  
-#if (BSP_CFG_RTOS_USED == 0) || (BSP_CFG_RTOS_USED == 5)  || (BSP_CFG_RTOS_USED == 4)  /* Non-OS or Azure RTOS */
-    /* Call the main program function (should not return) */
-    R_BSP_MAIN_FUNCTION();
-#elif BSP_CFG_RTOS_USED == 1    /* FreeRTOS */
-    /* Lock the channel that system timer of RTOS is using. */
-
-
-R_BSP_POR_FUNCTION(R_BSP_STARTUP_FUNCTION)  
-#if BSP_CFG_USER_STACK_ENABLE == 1
-    INTERNAL_NOT_USED(ustack_area);
-#endif
-    INTERNAL_NOT_USED(istack_area);
-#endif
-	↓  修正  
-#if BSP_CFG_USER_STACK_ENABLE == 1
-   // INTERNAL_NOT_USED(ustack_area);
-#endif
-  //  INTERNAL_NOT_USED(istack_area);
-#endif    
-R_BSP_SET_INTB(R_BSP_SECTOP_INTVECTTBL);  
-	↓  修正  
-// R_BSP_SET_INTB(R_BSP_SECTOP_INTVECTTBL);  
-
-#if (BSP_CFG_RTOS_USED == 0) || (BSP_CFG_RTOS_USED == 5)  /* Non-OS or Azure RTOS or Toppers*/
-    /* Call the main program function (should not return) */
-    R_BSP_MAIN_FUNCTION();
-
-#if (BSP_CFG_RTOS_USED == 0) || (BSP_CFG_RTOS_USED == 5) || (BSP_CFG_RTOS_USED == 4)   /* Non-OS or Azure RTOS or Toppers*/
-    /* Call the main program function (should not return) */
-    R_BSP_MAIN_FUNCTION();    
-
-   bsp_interrupt_open();  
- 	↓  修正  
-   //bsp_interrupt_open();  
-
-smc_gen\r_config\r_cmt_rx_config.h  (初回ビルド後に生成)
-#if (BSP_CFG_RTOS_USED == 4) && (BSP_CFG_RENESAS_RTOS_USED == 0) /* RI600V4 */
-#define _RI_TRACE_TIMER 1 /* RI600V4 uses CMT1 channel for the trace feature.*/
-  ↓  修正  
-#if (BSP_CFG_RTOS_USED == 4) && (BSP_CFG_RENESAS_RTOS_USED == 0) /* RI600V4 */
-#define _RI_TRACE_TIMER 0 /* RI600V4 uses CMT1 channel for the trace feature.*/
-
+$ pwd
+[個別インストール環境]/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/WolfSSLDemo
+ patch --binary -p0 < ./bsp_patch
 ```
 
 # 4.wolfSSLDemoプロジェクトのビルド  
