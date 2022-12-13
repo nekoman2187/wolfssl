@@ -6,7 +6,7 @@
 
 1.Renesas e² studio Version: 2022-07 (22.7.0)以降  
 2.Renesas e² studio BSP   
-3.Toppers OS 1.91.1 (Patch RX720N適用版)    
+3.Toppers OS 1.9.1 (Patch RX720N適用版)    
 <br>
 |要素|名称/バージョン|
 |:--|:--|
