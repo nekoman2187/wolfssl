@@ -1,0 +1,12 @@
+#
+# Copyright (c) 2016- Hisashi Hata
+# Released under the toppers license
+# https://www.toppers.jp/license.html
+#
+
+#
+#		Driver Makefile (SCIg)
+#
+
+
+DRIVER_COBJS :=  $(DRIVER_COBJS) SCIg.o

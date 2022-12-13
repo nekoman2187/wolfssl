@@ -1,0 +1,53 @@
+#
+#		Makefile のcpu依存部（rx用）
+#
+
+# 
+#  CPU依存部ディレクトリ名の定義 
+# 
+ARCH_COM_DIR = $(SRCDIR)/arch/rx_$(TOOL)/rx_common
+
+#  コンパイルオプション
+#
+INCLUDES := $(INCLUDES) -I$(ARCH_COM_DIR)
+CDEFS := $(CDEFS)
+COPTS := $(COPTS)
+
+#
+#  カーネルに関する定義
+#
+KERNEL_DIR := $(KERNEL_DIR) $(ARCH_COM_DIR)
+KERNEL_ASMOBJS := $(KERNEL_ASMOBJS) prc_test.o
+KERNEL_COBJS := $(KERNEL_COBJS) 
+
+#
+#  システムサービスに関する定義
+#
+SYSSVC_DIR := $(SYSSVC_DIR)
+SYSSVC_COBJS := $(SYSSVC_COBJS)
+
+#
+#  依存関係の定義
+#
+$(OBJFILE): $(ARCH_COM_DIR)/prc_check.tf
+
+#
+#		Makefile のプロセッサ依存部（RX用）
+#
+
+#
+#  カーネルに関する定義
+#
+KERNEL_DIR := $(KERNEL_DIR) $(COREDIR)
+KERNEL_ASMOBJS := $(KERNEL_ASMOBJS) prc_support.o
+KERNEL_COBJS := $(KERNEL_COBJS) prc_config.o
+
+#
+#  依存関係の定義
+#
+cfg1_out.c: $(ARCH_COM_DIR)/prc_def.csv
+
+#
+#  コンフィギュレータ関係の変数の定義
+#
+CFG_TABS := $(CFG_TABS) --cfg1-def-table $(ARCH_COM_DIR)/prc_def.csv  

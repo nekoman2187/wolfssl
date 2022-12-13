@@ -1,0 +1,5 @@
+#
+#		Driver Makefile (mmc_gpio)
+#
+
+DRIVER_COBJS :=  $(DRIVER_COBJS) mmc_gpio.o
