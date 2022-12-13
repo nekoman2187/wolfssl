@@ -65,13 +65,6 @@ static int getIPaddr(char *arg)
     else return 0;
 }
 
-static int getPort(char *arg)
-{
-    int port;
-    if(sscanf(arg, "%d", &port) == 1)
-         return port;
-    else return 0;
-}
 
 WOLFSSL_CTX *wolfSSL_TLS_client_init()
 {

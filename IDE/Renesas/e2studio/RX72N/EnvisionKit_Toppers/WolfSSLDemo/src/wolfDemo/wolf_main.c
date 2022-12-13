@@ -1,35 +1,39 @@
-/***********************************************************************
-*
-*  FILE        : WolfSSLDemo.c
-*  DATE        : 2022-05-17
-*  DESCRIPTION : Main Program
-*
-*  NOTE:THIS IS A TYPICAL EXAMPLE.
-*
-***********************************************************************/
-#include <stdio.h>
+/*wolf_main.c
+ *
+ * Copyright (C) 2006-2022 wolfSSL Inc.
+ *
+ * This file is part of wolfSSL.
+ *
+ * wolfSSL is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * wolfSSL is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1335, USA
+ */
 #include <string.h>
-#include <stdbool.h>
-#include "r_t4_itcpip.h"
 #include "r_sys_time_rx_if.h"
-#include "Pin.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include "r_smc_entry.h"
-#include "platform.h"
 #include "r_cmt_rx_if.h"
-#include "r_t4_itcpip.h"
-#include "r_t4_rx_config.h"
 #include "Pin.h"
-#include "r_ether_rx_pinset.h"
-#include "platform.h"
+#include "r_t4_itcpip.h"
 #include "WolfSSLDemo.h"
 #define SSL_SERVER
 #define ETHER_TASK
-
+extern const UB _t4_dhcp_enable;
 static int dhcp_accept_flg = 0;
 static UW tcpudp_work[14800] = {0};
 UB	dhcp_evt = 0;
+void dhcp_check(void);
+void print_dhcp(VP param);
+#define DHCP_ENABEL        (1)
+#define IF_CH_NUMBER       (0)
 
 void main(void)
 {
@@ -66,6 +70,18 @@ void taskEther(intptr_t exinf) {
 	}
 
 }
+/* DHCP Reset Event Check */
+void dhcp_check(void)
+{
+
+	if(DHCP_ENABEL == _t4_dhcp_enable && dhcp_evt == DHCP_EV_PLEASE_RESET){
+        tcpudp_reset(IF_CH_NUMBER);
+        dhcp_evt = 0;
+	}
+
+	return;
+}
+
 void taskNetWork(intptr_t exinf) {
 	UB ctl = 0;
 	UW i = 0;
@@ -139,6 +155,25 @@ bool init_ether() {
         return false;
     }
     return true;
+}
+void print_dhcp(VP param)
+{
+	DHCP* dhcp_data = (DHCP*)param;
+    printf("Accept DHCP.ipaddr[4]   %d.%d.%d.%d\n",dhcp_data->ipaddr[0], dhcp_data->ipaddr[1],
+           dhcp_data->ipaddr[2], dhcp_data->ipaddr[3]);
+    printf("Accept DHCP.maskaddr[4] %d.%d.%d.%d\n",dhcp_data->maskaddr[0], dhcp_data->maskaddr[1],
+           dhcp_data->maskaddr[2], dhcp_data->maskaddr[3]);
+    printf("Accept DHCP.gwaddr[4]   %d.%d.%d.%d\n",dhcp_data->gwaddr[0], dhcp_data->gwaddr[1],
+           dhcp_data->gwaddr[2], dhcp_data->gwaddr[3]);
+    printf("Accept DHCP.dnsaddr[4]  %d.%d.%d.%d\n",dhcp_data->dnsaddr[0], dhcp_data->dnsaddr[1],
+           dhcp_data->dnsaddr[2], dhcp_data->dnsaddr[3]);
+    printf("Accept DHCP.dnsaddr2[4] %d.%d.%d.%d\n",dhcp_data->dnsaddr2[0], dhcp_data->dnsaddr2[1],
+           dhcp_data->dnsaddr2[2], dhcp_data->dnsaddr2[3]);
+    printf("Accept DHCP.macaddr[6]  %02X:%02X:%02X:%02X:%02X:%02X\n",dhcp_data->macaddr[0],  dhcp_data->macaddr[1],  dhcp_data->macaddr[2],
+           dhcp_data->macaddr[3],  dhcp_data->macaddr[4],  dhcp_data->macaddr[5]);
+    printf("Accept DHCP.domain[%d] %s\n", strlen(dhcp_data->domain), dhcp_data->domain);
+    printf("\n");
+    return;
 }
 
 ER system_callback(UB channel, UW eventid, VP param)
