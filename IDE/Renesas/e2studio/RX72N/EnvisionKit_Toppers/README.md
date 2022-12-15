@@ -26,12 +26,12 @@
  (上記操作操作を行う場合[プロジェクト][プロパティ]の[設定][toolchain]タブで[ツールチェーン:]が選択されている事を確認ください)  
  1-4. [wolflib/Debug]に[libwolflib.a]が生成されます  
  1-5.Toppersライブラリーのビルドの為、[https://www.toppers.jp/asp-d-download.html]より[asp-1.9.1.tar.gz]をダウンロードし[/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/]に解凍します   
- 1-6.Toppersライブラリーのビルドの為、[https://www.toppers.jp/cfg-download.html]　より[コンフィギュレータ Release 1.9.6（Windows用バイナリ）]をダウンロードし[1.5]で解凍した[1.9.1/asp]ディレクトリに[cfg/cdg]ディレクトリを作成し中に[cfg.exe]として解凍します  
+ 1-6.Toppersライブラリーのビルドの為、[https://www.toppers.jp/cfg-download.html]　より[コンフィギュレータ Release 1.9.6（Windows用バイナリ）]をダウンロードし[1.5]で解凍した[asp]ディレクトリに[cfg/cdg]ディレクトリを作成し中に[cfg.exe]として解凍します  
  1-7.Toppers ASPに以下に示すPtachを適用します  
  (Msys2でpatchコマンドが使えない場合は[pacman -S patch] でインストールが必要となります)     
  ``` 
  $ pwd
-[個別インストール環境]/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/1.9.1
+[個別インストール環境]/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/asp
  patch --binary -p1 < ../toppers.patch
 ```  
  1-8.事前準備確認  
@@ -57,8 +57,7 @@ $ make depend
  2-2.git レポジトリwolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppersの[wolfSSLDemo]を選択[フォルダーの選択]を押下  
  2-3.[WolfSSLDemo.scfg]をダブルクリックで設定ダイアログが表示→[コンポーネントタブ] を選択  
  2-4.[ソフトウェアコンポーネントダイアログ]ダイアログ右上の[コードの生成]を押下      
- 2-5.ダイアログ左のコンポーネント選択で[Startup] [r_bsp]を選択右クリックしコンテキストメニュー[バージョン変更]を選択し[現在のバージョン]  
-     が[7.10]である事を確認してください([7.10]でない場合[変更後のバージョン:]で[7.10]を選択し[次へ(N)>]を押下しコードを生成して下さい)   
+ 2-5.ダイアログ左のコンポーネント選択で[Startup] [r_bsp]を選択右クリックしコンテキストメニュー[バージョン変更]を選択し[現在のバージョン]が[7.10]である事を確認してください([7.10]でない場合[変更後のバージョン:]で[7.10]を選択し[次へ(N)>]を押下しコードを生成して下さい)   
  2-6.ダイアログ左のコンポーネント選択で[Drivers] [r_cmt_rx]を選択右クリックしコンテキストメニュー[バージョン変更]を選択し[現在のバージョン] が[5.10]である事を確認してください([5.10]でない場合[変更後のバージョン:]で[5.10]を選択し[次へ(N)>]を押下しコードを生成して下さい)     
 
  # 3.e² studio BSPにPtachを適用する  
