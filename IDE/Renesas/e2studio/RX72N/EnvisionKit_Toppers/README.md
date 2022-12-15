@@ -45,8 +45,8 @@ export PATH=PATH=$PATH:\/C/ProgramData\/GCC\ for\ Renesas\ RX\ 8.3.0.202202-GNUR
 　1-9.設定を確認後、以下を行います
   ```  
 $ pwd
-[個別インストール環境]/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/1.9.1
-$ perl ./asp/configure -T rx72n_gcc
+[個別インストール環境]/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/asp
+$ perl ./configure -T rx72n_gcc
 $ make depend
 ```  
  1-10.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルド    
