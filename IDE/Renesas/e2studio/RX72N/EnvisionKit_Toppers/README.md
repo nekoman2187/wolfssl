@@ -33,12 +33,13 @@
  # 2. TOPPERSライブラリーのビルド  
  2-1.Toppersライブラリーのビルドの為、[https://www.toppers.jp/asp-d-download.html]より[asp-1.9.1.tar.gz]をダウンロードし[/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/]に解凍します   
  2-2.Toppersライブラリーのビルドの為、[https://www.toppers.jp/cfg-download.html]　より[コンフィギュレータ Release 1.9.6（Windows用バイナリ）]をダウンロードし[1.5]で解凍した[asp]ディレクトリに[cfg/cdg]ディレクトリを作成し中に[cfg.exe]として解凍します  
- 2-3.Toppers ASPに以下に示すPtachを適用します  
+ 2-3.[https://github.com/farmer-bism/bismath_evalkit_target.git]より[bismath_evalkit_target-master.zip]をダウンロードし任意の場所に解凍します  
+ 2-4.Patch適用の為、以下に示すShellスクリプトを実行します  
  (Msys2でpatchコマンドが使えない場合は[pacman -S patch] でインストールが必要となります)     
  ``` 
  $ pwd
-[個別インストール環境]/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/asp
- patch --binary -p1 < ../toppers.patch
+[個別インストール環境]/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers
+ ./setting.sh [上記2.3で解凍した場所]/bismath_evalkit_target-master
 ```  
  2-4.事前準備確認  
    コマンド実行ではMsys2等の環境を事前にご用意ください  
