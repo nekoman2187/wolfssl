@@ -1,5 +1,5 @@
 diff -cr --new-file asp/arch/rx_gcc/rx72n/MANIFEST 1.9.1_update/arch/rx_gcc/rx72n/MANIFEST
-*** asp/arch/rx_gcc/rx72n/MANIFEST	Mon Dec 26 16:54:24 2022
+*** asp/arch/rx_gcc/rx72n/MANIFEST	Tue Dec 27 15:03:41 2022
 --- 1.9.1_update/arch/rx_gcc/rx72n/MANIFEST	Fri Dec 23 09:35:56 2022
 ***************
 *** 24,33 ****
@@ -25,7 +25,7 @@ diff -cr --new-file asp/arch/rx_gcc/rx72n/MANIFEST 1.9.1_update/arch/rx_gcc/rx72
   
   INCLUDE ../../target/rsk_rx_hew/MANIFEST
 diff -cr --new-file asp/arch/rx_gcc/rx72n/Makefile.prc 1.9.1_update/arch/rx_gcc/rx72n/Makefile.prc
-*** asp/arch/rx_gcc/rx72n/Makefile.prc	Mon Dec 26 16:54:24 2022
+*** asp/arch/rx_gcc/rx72n/Makefile.prc	Tue Dec 27 15:03:41 2022
 --- 1.9.1_update/arch/rx_gcc/rx72n/Makefile.prc	Fri Dec 23 09:35:56 2022
 ***************
 *** 16,22 ****
@@ -79,7 +79,7 @@ diff -cr --new-file asp/arch/rx_gcc/rx72n/Makefile.prc 1.9.1_update/arch/rx_gcc/
   
   
 diff -cr --new-file asp/arch/rx_gcc/rx72n/prc.tf 1.9.1_update/arch/rx_gcc/rx72n/prc.tf
-*** asp/arch/rx_gcc/rx72n/prc.tf	Mon Dec 26 16:54:24 2022
+*** asp/arch/rx_gcc/rx72n/prc.tf	Tue Dec 27 15:03:41 2022
 --- 1.9.1_update/arch/rx_gcc/rx72n/prc.tf	Fri Dec 23 09:35:56 2022
 ***************
 *** 37,43 ****
@@ -135,7 +135,7 @@ diff -cr --new-file asp/arch/rx_gcc/rx72n/prc.tf 1.9.1_update/arch/rx_gcc/rx72n/
   
   	$TAB$.end
 diff -cr --new-file asp/arch/rx_gcc/rx72n/prc_stddef.h 1.9.1_update/arch/rx_gcc/rx72n/prc_stddef.h
-*** asp/arch/rx_gcc/rx72n/prc_stddef.h	Mon Dec 26 16:54:24 2022
+*** asp/arch/rx_gcc/rx72n/prc_stddef.h	Tue Dec 27 15:03:41 2022
 --- 1.9.1_update/arch/rx_gcc/rx72n/prc_stddef.h	Fri Dec 23 09:35:56 2022
 ***************
 *** 37,43 ****
@@ -170,7 +170,7 @@ diff -cr --new-file asp/arch/rx_gcc/rx72n/prc_stddef.h 1.9.1_update/arch/rx_gcc/
   
   #endif /* TOPPERS_PRC_STDDEF_H */
 diff -cr --new-file asp/arch/rx_gcc/rx72n/prc_syssvc.h 1.9.1_update/arch/rx_gcc/rx72n/prc_syssvc.h
-*** asp/arch/rx_gcc/rx72n/prc_syssvc.h	Mon Dec 26 16:54:24 2022
+*** asp/arch/rx_gcc/rx72n/prc_syssvc.h	Tue Dec 27 15:03:41 2022
 --- 1.9.1_update/arch/rx_gcc/rx72n/prc_syssvc.h	Fri Dec 23 09:35:56 2022
 ***************
 *** 36,42 ****
@@ -190,7 +190,7 @@ diff -cr --new-file asp/arch/rx_gcc/rx72n/prc_syssvc.h 1.9.1_update/arch/rx_gcc/
   
   #ifndef TOPPERS_PRC_SYSSVC_H
 diff -cr --new-file asp/arch/rx_gcc/rx72n/rx72n.h 1.9.1_update/arch/rx_gcc/rx72n/rx72n.h
-*** asp/arch/rx_gcc/rx72n/rx72n.h	Mon Dec 26 16:54:24 2022
+*** asp/arch/rx_gcc/rx72n/rx72n.h	Tue Dec 27 15:03:41 2022
 --- 1.9.1_update/arch/rx_gcc/rx72n/rx72n.h	Fri Dec 23 09:35:56 2022
 ***************
 *** 37,46 ****
@@ -274,7 +274,7 @@ diff -cr --new-file asp/arch/rx_gcc/rx72n/rx72n.h 1.9.1_update/arch/rx_gcc/rx72n
 ! #endif	/* TOPPERS_RX72n_H */
   
 diff -cr --new-file asp/arch/rx_gcc/rx72n/rx72n.tf 1.9.1_update/arch/rx_gcc/rx72n/rx72n.tf
-*** asp/arch/rx_gcc/rx72n/rx72n.tf	Mon Dec 26 16:54:24 2022
+*** asp/arch/rx_gcc/rx72n/rx72n.tf	Tue Dec 27 15:03:41 2022
 --- 1.9.1_update/arch/rx_gcc/rx72n/rx72n.tf	Fri Dec 23 09:35:56 2022
 ***************
 *** 1,11 ****
@@ -332,7 +332,7 @@ diff -cr --new-file asp/arch/rx_gcc/rx72n/rx72n.tf 1.9.1_update/arch/rx_gcc/rx72
 ! $INCLUDE"rx_gcc/RX72n/prc.tf"$
   
 diff -cr --new-file asp/arch/rx_gcc/rx72n/rx72n_config.c 1.9.1_update/arch/rx_gcc/rx72n/rx72n_config.c
-*** asp/arch/rx_gcc/rx72n/rx72n_config.c	Mon Dec 26 16:54:24 2022
+*** asp/arch/rx_gcc/rx72n/rx72n_config.c	Tue Dec 27 15:03:41 2022
 --- 1.9.1_update/arch/rx_gcc/rx72n/rx72n_config.c	Fri Dec 23 09:35:56 2022
 ***************
 *** 40,46 ****
@@ -369,7 +369,7 @@ diff -cr --new-file asp/arch/rx_gcc/rx72n/rx72n_config.c 1.9.1_update/arch/rx_gc
   	NULL_OFF, NULL_OFF, NULL_OFF, NULL_OFF, NULL_OFF,   /* No.115 - 119 予約 */
   	NULL_OFF, NULL_OFF,                     /* No.120 - 121 予約 */
 diff -cr --new-file asp/arch/rx_gcc/rx72n/rx72n_config.h 1.9.1_update/arch/rx_gcc/rx72n/rx72n_config.h
-*** asp/arch/rx_gcc/rx72n/rx72n_config.h	Mon Dec 26 16:54:24 2022
+*** asp/arch/rx_gcc/rx72n/rx72n_config.h	Tue Dec 27 15:03:41 2022
 --- 1.9.1_update/arch/rx_gcc/rx72n/rx72n_config.h	Fri Dec 23 09:35:56 2022
 ***************
 *** 37,43 ****
@@ -433,7 +433,7 @@ diff -cr --new-file asp/arch/rx_gcc/rx72n/rx72n_config.h 1.9.1_update/arch/rx_gc
 ! #endif	/* TOPPERS_RX72n_CONFIG_H */
   
 diff -cr --new-file asp/arch/rx_gcc/rx72n/rx72n_support.c 1.9.1_update/arch/rx_gcc/rx72n/rx72n_support.c
-*** asp/arch/rx_gcc/rx72n/rx72n_support.c	Mon Dec 26 16:54:24 2022
+*** asp/arch/rx_gcc/rx72n/rx72n_support.c	Tue Dec 27 15:03:41 2022
 --- 1.9.1_update/arch/rx_gcc/rx72n/rx72n_support.c	Fri Dec 23 09:35:56 2022
 ***************
 *** 37,43 ****
@@ -453,7 +453,7 @@ diff -cr --new-file asp/arch/rx_gcc/rx72n/rx72n_support.c 1.9.1_update/arch/rx_g
   void set_init_moudlestop_setting(){
       /* power management setting*/
 diff -cr --new-file asp/arch/rx_gcc/rx72n/start.S 1.9.1_update/arch/rx_gcc/rx72n/start.S
-*** asp/arch/rx_gcc/rx72n/start.S	Mon Dec 26 16:54:24 2022
+*** asp/arch/rx_gcc/rx72n/start.S	Tue Dec 27 15:03:41 2022
 --- 1.9.1_update/arch/rx_gcc/rx72n/start.S	Fri Dec 23 09:35:56 2022
 ***************
 *** 37,89 ****
@@ -565,7 +565,7 @@ diff -cr --new-file asp/arch/rx_gcc/rx72n/start.S 1.9.1_update/arch/rx_gcc/rx72n
   .end
 ! #endif
 diff -cr --new-file asp/arch/rx_gcc/rx_common/prc_config.c 1.9.1_update/arch/rx_gcc/rx_common/prc_config.c
-*** asp/arch/rx_gcc/rx_common/prc_config.c	Mon Dec 26 16:54:23 2022
+*** asp/arch/rx_gcc/rx_common/prc_config.c	Tue Dec 27 15:03:41 2022
 --- 1.9.1_update/arch/rx_gcc/rx_common/prc_config.c	Fri Dec 23 09:35:57 2022
 ***************
 *** 59,65 ****
@@ -585,7 +585,7 @@ diff -cr --new-file asp/arch/rx_gcc/rx_common/prc_config.c 1.9.1_update/arch/rx_
    *  プロセッサ依存の初期化
    */
 diff -cr --new-file asp/arch/rx_gcc/rx_common/prc_rename.h 1.9.1_update/arch/rx_gcc/rx_common/prc_rename.h
-*** asp/arch/rx_gcc/rx_common/prc_rename.h	Mon Dec 26 16:54:24 2022
+*** asp/arch/rx_gcc/rx_common/prc_rename.h	Tue Dec 27 15:03:41 2022
 --- 1.9.1_update/arch/rx_gcc/rx_common/prc_rename.h	Fri Dec 23 09:35:57 2022
 ***************
 *** 9,14 ****
@@ -609,7 +609,7 @@ diff -cr --new-file asp/arch/rx_gcc/rx_common/prc_rename.h 1.9.1_update/arch/rx_
   #define _prc_terminate				__kernel_prc_terminate
   #define _x_config_int				__kernel_x_config_int
 diff -cr --new-file asp/arch/rx_gcc/rx_common/prc_support.S 1.9.1_update/arch/rx_gcc/rx_common/prc_support.S
-*** asp/arch/rx_gcc/rx_common/prc_support.S	Mon Dec 26 16:54:24 2022
+*** asp/arch/rx_gcc/rx_common/prc_support.S	Tue Dec 27 15:03:41 2022
 --- 1.9.1_update/arch/rx_gcc/rx_common/prc_support.S	Fri Dec 23 09:35:57 2022
 ***************
 *** 89,94 ****
@@ -745,7 +745,7 @@ diff -cr --new-file asp/arch/rx_gcc/rx_common/prc_support.S 1.9.1_update/arch/rx
   exception_from_nonkernelint:	; 多重割込み
   	mov.l	EXC_GET_PSW_OFFSET[r3], r5
 diff -cr --new-file asp/arch/rx_gcc/rx_common/prc_unrename.h 1.9.1_update/arch/rx_gcc/rx_common/prc_unrename.h
-*** asp/arch/rx_gcc/rx_common/prc_unrename.h	Mon Dec 26 16:54:24 2022
+*** asp/arch/rx_gcc/rx_common/prc_unrename.h	Tue Dec 27 15:03:41 2022
 --- 1.9.1_update/arch/rx_gcc/rx_common/prc_unrename.h	Fri Dec 23 09:35:57 2022
 ***************
 *** 9,14 ****
@@ -770,7 +770,7 @@ diff -cr --new-file asp/arch/rx_gcc/rx_common/prc_unrename.h 1.9.1_update/arch/r
   #undef _prc_terminate
   #undef _x_config_int
 diff -cr --new-file asp/target/rx72n_gcc/MANIFEST 1.9.1_update/target/rx72n_gcc/MANIFEST
-*** asp/target/rx72n_gcc/MANIFEST	Mon Dec 26 16:54:24 2022
+*** asp/target/rx72n_gcc/MANIFEST	Tue Dec 27 15:03:42 2022
 --- 1.9.1_update/target/rx72n_gcc/MANIFEST	Tue Dec 13 14:29:08 2022
 ***************
 *** 19,27 ****
@@ -785,7 +785,7 @@ diff -cr --new-file asp/target/rx72n_gcc/MANIFEST 1.9.1_update/target/rx72n_gcc/
   target_support.src
 --- 19,24 ----
 diff -cr --new-file asp/target/rx72n_gcc/Makefile.target 1.9.1_update/target/rx72n_gcc/Makefile.target
-*** asp/target/rx72n_gcc/Makefile.target	Mon Dec 26 16:54:24 2022
+*** asp/target/rx72n_gcc/Makefile.target	Tue Dec 27 15:03:42 2022
 --- 1.9.1_update/target/rx72n_gcc/Makefile.target	Tue Dec 13 14:29:08 2022
 ***************
 *** 5,12 ****
@@ -965,7 +965,7 @@ diff -cr --new-file asp/target/rx72n_gcc/dummy.c 1.9.1_update/target/rx72n_gcc/d
 +  void timer_cm2_int_Wrapper() {
 +   }
 diff -cr --new-file asp/target/rx72n_gcc/rx72n_gcc.ld 1.9.1_update/target/rx72n_gcc/rx72n_gcc.ld
-*** asp/target/rx72n_gcc/rx72n_gcc.ld	Mon Dec 26 16:54:24 2022
+*** asp/target/rx72n_gcc/rx72n_gcc.ld	Tue Dec 27 15:03:42 2022
 --- 1.9.1_update/target/rx72n_gcc/rx72n_gcc.ld	Tue Dec 13 14:29:09 2022
 ***************
 *** 1,7 ****
@@ -1082,7 +1082,7 @@ diff -cr --new-file asp/target/rx72n_gcc/rx72n_gcc.ld 1.9.1_update/target/rx72n_
   	PROVIDE(end = .);
   }
 diff -cr --new-file asp/target/rx72n_gcc/sectrx.S 1.9.1_update/target/rx72n_gcc/sectrx.S
-*** asp/target/rx72n_gcc/sectrx.S	Mon Dec 26 16:54:24 2022
+*** asp/target/rx72n_gcc/sectrx.S	Tue Dec 27 15:03:42 2022
 --- 1.9.1_update/target/rx72n_gcc/sectrx.S	Tue Dec 13 14:29:09 2022
 ***************
 *** 48,54 ****
@@ -1102,7 +1102,7 @@ diff -cr --new-file asp/target/rx72n_gcc/sectrx.S 1.9.1_update/target/rx72n_gcc/
   DEFAULT_ISTACK_TOP:
   
 diff -cr --new-file asp/target/rx72n_gcc/target.tf 1.9.1_update/target/rx72n_gcc/target.tf
-*** asp/target/rx72n_gcc/target.tf	Mon Dec 26 16:54:24 2022
+*** asp/target/rx72n_gcc/target.tf	Tue Dec 27 15:03:42 2022
 --- 1.9.1_update/target/rx72n_gcc/target.tf	Tue Dec 13 14:29:09 2022
 ***************
 *** 37,48 ****
@@ -1149,7 +1149,7 @@ diff -cr --new-file asp/target/rx72n_gcc/target.tf 1.9.1_update/target/rx72n_gcc
 ! $INCLUDE "rx_gcc/rx72n/rx72n.tf"$
   
 diff -cr --new-file asp/target/rx72n_gcc/target_board.h 1.9.1_update/target/rx72n_gcc/target_board.h
-*** asp/target/rx72n_gcc/target_board.h	Mon Dec 26 16:54:24 2022
+*** asp/target/rx72n_gcc/target_board.h	Tue Dec 27 15:03:42 2022
 --- 1.9.1_update/target/rx72n_gcc/target_board.h	Tue Dec 13 14:29:09 2022
 ***************
 *** 41,74 ****
@@ -1202,7 +1202,7 @@ diff -cr --new-file asp/target/rx72n_gcc/target_board.h 1.9.1_update/target/rx72
   #endif	/* TOPPERS_STARTER_KIT_H */
   
 diff -cr --new-file asp/target/rx72n_gcc/target_check.tf 1.9.1_update/target/rx72n_gcc/target_check.tf
-*** asp/target/rx72n_gcc/target_check.tf	Mon Dec 26 16:54:24 2022
+*** asp/target/rx72n_gcc/target_check.tf	Tue Dec 27 15:03:42 2022
 --- 1.9.1_update/target/rx72n_gcc/target_check.tf	Tue Dec 13 14:29:09 2022
 ***************
 *** 36,42 ****
@@ -1222,7 +1222,7 @@ diff -cr --new-file asp/target/rx72n_gcc/target_check.tf 1.9.1_update/target/rx7
   
   $ 
 diff -cr --new-file asp/target/rx72n_gcc/target_config.c 1.9.1_update/target/rx72n_gcc/target_config.c
-*** asp/target/rx72n_gcc/target_config.c	Mon Dec 26 16:54:24 2022
+*** asp/target/rx72n_gcc/target_config.c	Tue Dec 27 15:03:42 2022
 --- 1.9.1_update/target/rx72n_gcc/target_config.c	Tue Dec 13 14:29:09 2022
 ***************
 *** 36,109 ****
@@ -1342,7 +1342,7 @@ diff -cr --new-file asp/target/rx72n_gcc/target_config.c 1.9.1_update/target/rx7
   
 --- 78,83 ----
 diff -cr --new-file asp/target/rx72n_gcc/target_config.h 1.9.1_update/target/rx72n_gcc/target_config.h
-*** asp/target/rx72n_gcc/target_config.h	Mon Dec 26 16:54:24 2022
+*** asp/target/rx72n_gcc/target_config.h	Tue Dec 27 15:03:42 2022
 --- 1.9.1_update/target/rx72n_gcc/target_config.h	Mon Dec 26 14:56:53 2022
 ***************
 *** 41,47 ****
@@ -1557,7 +1557,7 @@ diff -cr --new-file asp/target/rx72n_gcc/target_edmac.h 1.9.1_update/target/rx72
 + 
 + 
 diff -cr --new-file asp/target/rx72n_gcc/target_sil.h 1.9.1_update/target/rx72n_gcc/target_sil.h
-*** asp/target/rx72n_gcc/target_sil.h	Mon Dec 26 16:54:24 2022
+*** asp/target/rx72n_gcc/target_sil.h	Tue Dec 27 15:03:42 2022
 --- 1.9.1_update/target/rx72n_gcc/target_sil.h	Tue Dec 13 14:29:09 2022
 ***************
 *** 36,42 ****
@@ -1577,7 +1577,7 @@ diff -cr --new-file asp/target/rx72n_gcc/target_sil.h 1.9.1_update/target/rx72n_
    *  このインクルードファイルは，sil.hの先頭でインクルードされる．他のファ
    *  イルからは直接インクルードすることはない．このファイルをインクルー
 diff -cr --new-file asp/target/rx72n_gcc/target_syssvc.h 1.9.1_update/target/rx72n_gcc/target_syssvc.h
-*** asp/target/rx72n_gcc/target_syssvc.h	Mon Dec 26 16:54:24 2022
+*** asp/target/rx72n_gcc/target_syssvc.h	Tue Dec 27 15:03:42 2022
 --- 1.9.1_update/target/rx72n_gcc/target_syssvc.h	Tue Dec 13 14:29:09 2022
 ***************
 *** 43,49 ****
@@ -1614,7 +1614,7 @@ diff -cr --new-file asp/target/rx72n_gcc/target_syssvc.h 1.9.1_update/target/rx7
   
   /*
 diff -cr --new-file asp/target/rx72n_gcc/target_timer.c 1.9.1_update/target/rx72n_gcc/target_timer.c
-*** asp/target/rx72n_gcc/target_timer.c	Mon Dec 26 16:54:24 2022
+*** asp/target/rx72n_gcc/target_timer.c	Tue Dec 27 15:03:42 2022
 --- 1.9.1_update/target/rx72n_gcc/target_timer.c	Tue Dec 13 14:29:09 2022
 ***************
 *** 76,83 ****
@@ -1743,7 +1743,7 @@ diff -cr --new-file asp/target/rx72n_gcc/target_timer.c 1.9.1_update/target/rx72
 + 	i_end_int(INHNO_TIMER_CMT2);
 + }
 diff -cr --new-file asp/target/rx72n_gcc/target_timer.cfg 1.9.1_update/target/rx72n_gcc/target_timer.cfg
-*** asp/target/rx72n_gcc/target_timer.cfg	Mon Dec 26 16:54:24 2022
+*** asp/target/rx72n_gcc/target_timer.cfg	Tue Dec 27 15:03:42 2022
 --- 1.9.1_update/target/rx72n_gcc/target_timer.cfg	Tue Dec 13 14:29:09 2022
 ***************
 *** 1,5 ****
@@ -1775,7 +1775,7 @@ diff -cr --new-file asp/target/rx72n_gcc/target_timer.cfg 1.9.1_update/target/rx
 + DEF_INH(INHNO_TIMER_CMT2, { TA_NULL, target_timer_cmt2_handler });
 + CFG_INT(INTNO_TIMER_CMT2, { INTATR_TIMER, INTPRI_TIMER });
 diff -cr --new-file asp/target/rx72n_gcc/target_timer.h 1.9.1_update/target/rx72n_gcc/target_timer.h
-*** asp/target/rx72n_gcc/target_timer.h	Mon Dec 26 16:54:24 2022
+*** asp/target/rx72n_gcc/target_timer.h	Tue Dec 27 15:03:42 2022
 --- 1.9.1_update/target/rx72n_gcc/target_timer.h	Tue Dec 13 14:29:09 2022
 ***************
 *** 44,50 ****
@@ -1920,8 +1920,8 @@ diff -cr --new-file asp/target/rx72n_gcc/target_timer.h 1.9.1_update/target/rx72
   #endif /* TOPPERS_MACRO_ONLY */
   #endif /* TOPPERS_TARGET_TIMER_H */
 diff -cr --new-file asp/sample/Makefile 1.9.1_update/sample/Makefile
-*** asp/sample/Makefile	Mon Dec 26 16:54:24 2022
---- 1.9.1_update/sample/Makefile	Tue Dec 13 14:29:08 2022
+*** asp/sample/Makefile	Tue Dec 27 15:03:42 2022
+--- 1.9.1_update/sample/Makefile	Tue Dec 27 15:01:51 2022
 ***************
 *** 136,142 ****
   #
@@ -1952,7 +1952,7 @@ diff -cr --new-file asp/sample/Makefile 1.9.1_update/sample/Makefile
   #
   SYSSVC_DIR := $(SYSSVC_DIR) $(SRCDIR)/syssvc $(SRCDIR)/library
   SYSSVC_ASMOBJS := $(SYSSVC_ASMOBJS)
-! SYSSVC_COBJS := $(SYSSVC_COBJS) banner.o syslog.o logtask.o \
+! SYSSVC_COBJS := $(SYSSVC_COBJS) banner.o syslog.o  \
   				@(SYSSVCOBJS) $(CXXRTS)
   SYSSVC_CFLAGS := $(SYSSVC_CFLAGS)
   SYSSVC_LIBS := $(SYSSVC_LIBS)
@@ -2622,7 +2622,7 @@ diff -cr --new-file asp/sample/Makefile.bak 1.9.1_update/sample/Makefile.bak
 + 	@echo "*** Default compile rules should not be used."
 + 	$(CC) -c $(CFLAGS) $<
 diff -cr --new-file asp/sample/sample1.c 1.9.1_update/sample/sample1.c
-*** asp/sample/sample1.c	Mon Dec 26 16:54:24 2022
+*** asp/sample/sample1.c	Tue Dec 27 15:03:42 2022
 --- 1.9.1_update/sample/sample1.c	Tue Dec 13 14:29:08 2022
 ***************
 *** 136,201 ****
@@ -2940,8 +2940,8 @@ diff -cr --new-file asp/sample/sample1.c 1.9.1_update/sample/sample1.c
   	syslog(LOG_NOTICE, "Sample program ends.");
   	SVC_PERROR(ext_ker());
 diff -cr --new-file asp/sample/sample1.cfg 1.9.1_update/sample/sample1.cfg
-*** asp/sample/sample1.cfg	Mon Dec 26 16:54:24 2022
---- 1.9.1_update/sample/sample1.cfg	Tue Dec 13 14:29:08 2022
+*** asp/sample/sample1.cfg	Tue Dec 27 15:03:42 2022
+--- 1.9.1_update/sample/sample1.cfg	Tue Dec 27 15:34:08 2022
 ***************
 *** 6,26 ****
    *  サンプルプログラム(1)のシステムコンフィギュレーションファイル
@@ -2949,8 +2949,8 @@ diff -cr --new-file asp/sample/sample1.cfg 1.9.1_update/sample/sample1.cfg
   INCLUDE("target_timer.cfg");
   INCLUDE("syssvc/syslog.cfg");
   INCLUDE("syssvc/banner.cfg");
-- INCLUDE("syssvc/serial.cfg");
-  INCLUDE("syssvc/logtask.cfg");
+! INCLUDE("syssvc/serial.cfg");
+! INCLUDE("syssvc/logtask.cfg");
   
   #include "sample1.h"
   CRE_TSK(TASK1, { TA_NULL, 1, task, MID_PRIORITY, STACK_SIZE, NULL });
@@ -2972,7 +2972,7 @@ diff -cr --new-file asp/sample/sample1.cfg 1.9.1_update/sample/sample1.cfg
 + INCLUDE("target_edmac.cfg");
   INCLUDE("syssvc/syslog.cfg");
   INCLUDE("syssvc/banner.cfg");
-  INCLUDE("syssvc/logtask.cfg");
+! 
   
   #include "sample1.h"
   CRE_TSK(TASK1, { TA_NULL, 1, task, MID_PRIORITY, STACK_SIZE, NULL });
@@ -2993,7 +2993,7 @@ diff -cr --new-file asp/sample/sample1.cfg 1.9.1_update/sample/sample1.cfg
 + 
   #endif /* CPUEXC1 */
 diff -cr --new-file asp/sample/sample1.h 1.9.1_update/sample/sample1.h
-*** asp/sample/sample1.h	Mon Dec 26 16:54:24 2022
+*** asp/sample/sample1.h	Tue Dec 27 15:03:42 2022
 --- 1.9.1_update/sample/sample1.h	Tue Dec 13 14:29:08 2022
 ***************
 *** 69,75 ****
@@ -3030,7 +3030,7 @@ diff -cr --new-file asp/sample/sample1.h 1.9.1_update/sample/sample1.h
   extern void	tex_routine(TEXPTN texptn, intptr_t exinf);
   #ifdef CPUEXC1
   extern void	cpuexc_handler(void *p_excinf);
-*** asp/kernel/interrupt.c	Mon Dec 26 16:54:23 2022
+*** asp/kernel/interrupt.c	Tue Dec 27 15:03:41 2022
 --- 1.9.1_update/kernel/interrupt.c	Tue Dec 13 14:29:03 2022
 ***************
 *** 113,118 ****
@@ -3052,7 +3052,7 @@ diff -cr --new-file asp/sample/sample1.h 1.9.1_update/sample/sample1.h
   #ifdef TOPPERS_ena_int
   #ifdef TOPPERS_SUPPORT_ENA_INT
   
-*** asp/kernel/kernel_impl.h	Mon Dec 26 16:54:23 2022
+*** asp/kernel/kernel_impl.h	Tue Dec 27 15:03:41 2022
 --- 1.9.1_update/kernel/kernel_impl.h	Tue Dec 13 14:29:03 2022
 ***************
 *** 125,130 ****
