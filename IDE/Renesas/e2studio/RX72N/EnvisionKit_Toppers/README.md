@@ -14,7 +14,7 @@
 |要素|名称/バージョン|
 |:--|:--|
 |Renesas e² studio Version|GR-2022-07 (22.7.0)以降|
-|Toppers OS|1.9.1|
+|Toppers OS|1.9.3|
 |Toppers コンフィギュレータ|1.9.6|
 |Renesas BSP r_bsp|7.10|
 |Renesas BSP r_cmt_rx|5.10|
@@ -31,15 +31,14 @@
  1-4. [wolflib/Debug]に[libwolflib.a]が生成されます
 
  # 2. TOPPERSライブラリーのビルド  
- 2-1.Toppersライブラリーのビルドの為、[https://www.toppers.jp/asp-d-download.html]より[asp-1.9.1.tar.gz]をダウンロードし[/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/]に解凍します   
+ 2-1.Toppersライブラリーのビルドの為、[https://www.toppers.jp/asp-d-download.html]より[asp-1.9.3 Renesas BSP 適用version]をダウンロードし[/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/]に解凍します   
  2-2.Toppersライブラリーのビルドの為、[https://www.toppers.jp/cfg-download.html]　より[コンフィギュレータ Release 1.9.6（Windows用バイナリ）]をダウンロードし[1.5]で解凍した[asp]ディレクトリに[cfg/cdg]ディレクトリを作成し中に[cfg.exe]として解凍します  
- 2-3.[https://github.com/farmer-bism/bismath_evalkit_target.git]より[bismath_evalkit_target-master.zip]をダウンロードし任意の場所に解凍します  
- 2-4.Patch適用の為、以下に示すShellスクリプトを実行します  
- (Msys2でpatchコマンドが使えない場合は[pacman -S patch] でインストールが必要となります)     
+ 2-3.Patch適用の為、以下に示すShellスクリプトを実行します  
+   (EDMAC使用に必要なファイルをコピーします)
  ``` 
  $ pwd
 [個別インストール環境]/wolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers
- ./setting.sh [上記2.3で解凍した場所]/bismath_evalkit_target-master
+ ./setting.sh 
 ```  
  2-4.事前準備確認  
    コマンド実行ではMsys2等の環境を事前にご用意ください  
@@ -60,7 +59,8 @@ $ make depend
  2-7.プロジェクト・エクスプローラーの作成したプロジェクトをクリック後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルド    
  2-8.toppers_rx]に[libasp.a]が生成されます    
  
-# 3. wolfSSLDemoプロジェクトのビルド 3-1.メニューの[ファイル・システムからプロジェクトを開く...]を選択  
+# 3. wolfSSLDemoプロジェクトのビルド  
+ 3-1.メニューの[ファイル・システムからプロジェクトを開く...]を選択  
  3-2.git レポジトリwolfssl/IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppersの[wolfSSLDemo]を選択[フォルダーの選択]を押下  
  3-3.[WolfSSLDemo.scfg]をダブルクリックで設定ダイアログが表示→[コンポーネントタブ] を選択  
  3.4.[ソフトウェアコンポーネントダイアログ]ダイアログ右上の[コードの生成]を押下      
@@ -70,6 +70,7 @@ $ make depend
 
    
  3-7.生成されたBSPをToppersに適用する為、Patch コマンドにて修正をします  
+ (Msys2でpatchコマンドが使えない場合は[pacman -S patch] でインストールが必要となります)     
  以下を行います
  ```  
 $ pwd
