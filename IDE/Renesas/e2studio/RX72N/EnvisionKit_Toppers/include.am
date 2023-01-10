@@ -1,0 +1,38 @@
+# vim:ft=automake
+# included from Top Level Makefile.am
+# All paths should be given relative to the root
+
+EXTRA_DIST+= README.md
+EXTRA_DIST+= setting.sh
+EXTRA_DIST+= toppers.patch
+EXTRA_DIST+= Toppers_app
+EXTRA_DIST+= Toppers_app/.cproject
+EXTRA_DIST+= Toppers_app/.project
+EXTRA_DIST+= Toppers_app/toppers_rx
+EXTRA_DIST+= wolflib
+EXTRA_DIST+= wolflib/.cproject
+EXTRA_DIST+= wolflib/.project
+EXTRA_DIST+= wolflib/src
+EXTRA_DIST+= WolfSSLDemo
+EXTRA_DIST+= WolfSSLDemo/.cproject
+EXTRA_DIST+= WolfSSLDemo/.project
+EXTRA_DIST+= WolfSSLDemo/bsp.patch
+EXTRA_DIST+= WolfSSLDemo/src
+EXTRA_DIST+= WolfSSLDemo/src/linker_script.ld
+EXTRA_DIST+= WolfSSLDemo/src/wolfDemo
+EXTRA_DIST+= WolfSSLDemo/src/wolfDemo/kernel.h
+EXTRA_DIST+= WolfSSLDemo/src/wolfDemo/kernel_id.h
+EXTRA_DIST+= WolfSSLDemo/src/wolfDemo/kernel_ram.h
+EXTRA_DIST+= WolfSSLDemo/src/wolfDemo/kernel_rom.h
+EXTRA_DIST+= WolfSSLDemo/src/wolfDemo/ri_cmt.h
+EXTRA_DIST+= WolfSSLDemo/src/wolfDemo/strings.h
+EXTRA_DIST+= WolfSSLDemo/src/wolfDemo/unistd.h
+EXTRA_DIST+= WolfSSLDemo/src/wolfDemo/user_settings.h
+EXTRA_DIST+= WolfSSLDemo/src/wolfDemo/wolfssl_dummy.c
+EXTRA_DIST+= WolfSSLDemo/src/wolfDemo/wolf_client.c
+EXTRA_DIST+= WolfSSLDemo/src/wolfDemo/wolf_console.c
+EXTRA_DIST+= WolfSSLDemo/src/wolfDemo/wolf_demo.h
+EXTRA_DIST+= WolfSSLDemo/src/wolfDemo/wolf_main.c
+EXTRA_DIST+= WolfSSLDemo/src/wolfDemo/wolf_main.h
+EXTRA_DIST+= WolfSSLDemo/src/wolfDemo/wolf_server.c
+EXTRA_DIST+= WolfSSLDemo/WolfSSLDemo.scfg

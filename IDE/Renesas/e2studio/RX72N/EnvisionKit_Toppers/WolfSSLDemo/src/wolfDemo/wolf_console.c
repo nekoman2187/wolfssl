@@ -25,6 +25,8 @@
 #include <stdint.h>
 
 #include "wolf_demo.h"
+extern void wolfSSL_TLS_server(void *v_ctx, func_args *args);
+extern void wolfSSL_TLS_client(wolfSSL_cl_ctx, &args);
 
 static WOLFSSL_CTX *wolfSSL_sv_ctx;
 static WOLFSSL_CTX *wolfSSL_cl_ctx;
@@ -73,16 +75,10 @@ static int get_arg(func_args *args)
 void wolfSSL_init()
 {
     uint32_t channel;
-   // R_CMT_CreatePeriodic(FREQ, &timeTick, &channel);
-
     wolfSSL_sv_ctx = wolfSSL_TLS_server_init();
     wolfSSL_cl_ctx = wolfSSL_TLS_client_init();
- //   wolfSSL_main();
 }
-void wolfSSL_startSrver() {
-	//
-	//wolfSSL_TLS_server(wolfSSL_sv_ctx, &args);
-}
+
 void wolfSSL_TLS_client_Wrapper() {
     func_args args = {0};
 
@@ -90,7 +86,6 @@ void wolfSSL_TLS_client_Wrapper() {
 
 	wolfSSL_TLS_client(wolfSSL_cl_ctx, &args);
 }
-extern void wolfSSL_TLS_server(void *v_ctx, func_args *args);
 void wolfSSL_TLS_server_Wrapper() {
     func_args args = {0};
 

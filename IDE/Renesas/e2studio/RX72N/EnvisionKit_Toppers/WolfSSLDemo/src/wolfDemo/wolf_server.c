@@ -26,7 +26,6 @@
 #include "r_t4_itcpip.h"
 #include "r_ether_rx_if.h"
 #include "r_sys_time_rx_if.h"
-#include "dhcp_client.h"
 #include "r_t4_rx_config.h"
 
 #include "wolfssl/certs_test.h"
