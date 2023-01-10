@@ -20,7 +20,7 @@
  */
 
 /*
- *		EDMACモジュール（RX72N用）
+ *		EDMAC module for RX72N
  *
  */
 
@@ -30,12 +30,11 @@
 #include "target_board.h"
 #include "prc_kernel.h"
 
-//#define INTNO_EDMAC_0	113			/* 割込み番号 */
 
-#define INHNO_EDMAC_0		INT_EDMAC0		/* 割込みハンドラ番号 */
-#define INTNO_EDMAC_0		INT_EDMAC0		/* 割込み番号 */
-#define INTPRI_EDMAC_0	-5					/* 割込み優先度 */
-#define INTATR_EDMAC_0	TA_ENAINT | TA_EDGE	/* 割込み属性 */
+#define INHNO_EDMAC_0		INT_EDMAC0		/* Interrupt handler number */
+#define INTNO_EDMAC_0		INT_EDMAC0		/* interrupt number */
+#define INTPRI_EDMAC_0	-5					/* Interrupt priority */
+#define INTATR_EDMAC_0	TA_ENAINT | TA_EDGE	/* interrupt attribute */
 #ifndef TOPPERS_MACRO_ONLY
 
 extern void	rx72n_edmac_interrput_wrapper(void);

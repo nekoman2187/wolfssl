@@ -29,7 +29,7 @@
 
 extern void ether_int_Wrapper();
 /*
- *	ターゲットシステム依存モジュール（RX72N用 EDMAC Wrapper）
+ *	Target system dependent module (EDMAC Wrapper for RX72N)
  */
 
 void

@@ -404,3 +404,9 @@ async
 
 # Generated user_settings_asm.h.
 user_settings_asm.h
+IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/Toppers_app/.settings/e2studio_project.prefs
+IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/Toppers_app/.settings/language.settings.xml
+IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/wolflib/.settings/e2studio_project.prefs
+IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/wolflib/.settings/language.settings.xml
+IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/WolfSSLDemo/.settings/e2studio_project.prefs
+IDE/Renesas/e2studio/RX72N/EnvisionKit_Toppers/WolfSSLDemo/.settings/language.settings.xml
