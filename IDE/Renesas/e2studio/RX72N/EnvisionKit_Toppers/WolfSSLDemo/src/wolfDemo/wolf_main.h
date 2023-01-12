@@ -22,6 +22,11 @@
 #define WOLFSSLDEMO_H_
 
 
+#include "r_sys_time_rx_if.h"
+#include "r_cmt_rx_if.h"
+#include "Pin.h"
+#include "r_t4_itcpip.h"
+
 #define DEBUG_PRINT
 #define SERVER_TEST
 

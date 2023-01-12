@@ -26,7 +26,7 @@
 
 #include "wolf_demo.h"
 extern void wolfSSL_TLS_server(void *v_ctx, func_args *args);
-extern void wolfSSL_TLS_client(wolfSSL_cl_ctx, &args);
+extern  void wolfSSL_TLS_client(void *v_ctx, func_args *args);
 
 static WOLFSSL_CTX *wolfSSL_sv_ctx;
 static WOLFSSL_CTX *wolfSSL_cl_ctx;
