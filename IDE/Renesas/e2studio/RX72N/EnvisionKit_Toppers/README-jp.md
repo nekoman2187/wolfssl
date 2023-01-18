@@ -82,11 +82,9 @@ $ pwd
   
  3-8.[3-1.]終了後プルダウンメニューから[プロジェクトのビルド(B)]キーを選択しビルド   
  3-9.ビルドで生成されたELFファイルを[メニュー]→[実行(R)]→[実行(R)]又は[デバッグ(D)]でボードへ転送を行い、実行します  
- ※コンフィグレーション直後/ビルドクリ3-2に[T4_Library_ether_ccrx_rxv1_little]がリンカーでエラーになる場合が
- ありますがプロジェクトの[プロパティ]ダイアログ[C/C++ビルド]の[設定]で[Linker]/[Archives]/[User defined archive (library) files (-I)]/[×]押下から[T4_Library_ether_ccrx_rxv1_little]を削除してください  
+ 注:コンフィグレーション直後/ビルドクリヤー後に[T4_Library_ether_ccrx_rxv1_little]がリンカーでエラーになる場合が
+ ありますがプロジェクトの[プロパティ]ダイアログ[C/C++ビルド]の[設定]で[Linker]/[Archives]/[User defined archive (library) files (-I)]/[×]押下から[T4_Library_ether_ccrx_rxv1_little]を削除してください   
  3-10.[WolfSSLDemo.c]のdefine値[#define SSL_SERVER]を定義を行うとサーバとしての動作になり、削除でクライアントとしての動作となります(通信相手はwolfsslサンプルにてlinux,windows,macにて作成の事)    
- ※クライアントとしての動作の場合[src/wolfDemo/wolf_demo.h]の  
- サーバIPアドレスのdefine値 [SERVER_IP]を"xxx.xx.xx.xx"       
- ポート番号のdefine値 [SERVER_PortNo]をポート番号として設定して下さい    
+ 注:クライアントとしての動作の場合[src/wolfDemo/wolf_demo.h]のサーバIPアドレスのdefine値 [SERVER_IP]を"xxx.xx.xx.xx"]ポート番号のdefine値 [SERVER_PortNo]をポート番号として設定して下さい    
  3-11.[Renesas Debug Virtual Console]にて実行を確認します   
 
