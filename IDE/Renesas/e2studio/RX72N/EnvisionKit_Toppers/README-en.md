@@ -71,7 +71,7 @@ $ make depend
 
   2-7. Click the created project in Project Explorer and select the [Build Project (B)] key from the pull-down menu to build.
 
-  2-8.toppers_rx] will generate [libasp.a]
+  2-8.[toppers_rx] will generate [libasp.a]
  
 # 3. Build the wolfSSLDemo project
 
@@ -107,5 +107,5 @@ $pwd
   3-10.If you define the define value [#define SSL_SERVER] in [WolfSSLDemo.c], it will operate as a server, and if you delete it, it will operate as a client (communication partners are linux, windows, mac created by
   * When operating as a client, [src/wolfDemo/wolf_demo.h]
   Server IP address define value [SERVER_IP] to "xxx.xx.xx.xx"
-  Set the port number define value [SERVER_PortNo] as the port number
+  Set the port number define value [SERVER_PortNo] as the port number  
   3-11. Check the execution in [Renesas Debug Virtual Console]
