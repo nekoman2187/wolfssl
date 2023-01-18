@@ -10,15 +10,15 @@ This demo client and server run on "Toopers OS" and Renesas "RX72N EnvisionKit" 
 1. Renesas e² studio Version: 2022-07 (22.7.0) or later
 2. Renesas e² studio BSP
 3. Toppers OS 1.9.1 (Patch RX720N version)
-<br>
-|element|name/version|
-|:--|:--|
-|Renesas e² studio Version|GR-2022-07 (22.7.0) or later|
-|Toppers OS|1.9.3|
-|Toppers Configurator|1.9.6|
-|Renesas BSP r_bsp|7.10|
-|Renesas BSP r_cmt_rx|5.10|
-<br>
+<br> 
+|element|name/version| 
+|:--|:--| 
+|Renesas e² studio Version|GR-2022-07 (22.7.0) or later| 
+|Toppers OS|1.9.3| 
+|Toppers Configurator|1.9.6| 
+|Renesas BSP r_bsp|7.10| 
+|Renesas BSP r_cmt_rx|5.10| 
+<br> 
 
 
 # Build libraries
